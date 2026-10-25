@@ -2695,7 +2695,7 @@ button {
   position: relative;
   background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-surface) 100%);
   color: #ffffff;
-  padding: 5rem 0 3.5rem;
+  padding: 2.75rem 0 2rem;
   overflow: hidden;
   border-bottom: 1px solid rgba(0, 212, 250, 0.2);
 }
@@ -2716,9 +2716,9 @@ button {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: #94a3b8;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.85rem;
   flex-wrap: wrap;
 }
 
@@ -2745,26 +2745,26 @@ button {
   background: rgba(0, 212, 250, 0.15);
   border: 1px solid rgba(0, 212, 250, 0.35);
   color: var(--accent-cyan);
-  padding: 0.35rem 0.95rem;
+  padding: 0.3rem 0.85rem;
   border-radius: var(--radius-pill);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.65rem;
 }
 
 .page-hero__title {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-size: clamp(1.85rem, 2.8vw, 2.45rem);
   font-weight: 800;
   line-height: 1.2;
-  margin-bottom: 1rem;
+  margin-bottom: 0.65rem;
 }
 
 .page-hero__subtitle {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #cbd5e1;
   max-width: 680px;
-  line-height: 1.6;
+  line-height: 1.55;
 }
 
 /* ==========================================================================
@@ -2773,14 +2773,14 @@ button {
 .treatment-layout {
   display: grid;
   grid-template-columns: 1fr 360px;
-  gap: 3rem;
+  gap: 2.25rem;
   align-items: start;
 }
 
 @media (max-width: 1024px) {
   .treatment-layout {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2rem;
   }
 }
 
@@ -2793,7 +2793,7 @@ button {
   top: 90px;
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
+  gap: 1.5rem;
 }
 
 .clinical-summary-box {
@@ -2803,9 +2803,9 @@ button {
   background: #ffffff;
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
-  padding: 1.5rem;
+  padding: 1.15rem 1.25rem;
   box-shadow: var(--shadow-sm);
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.75rem;
 }
 
 @media (max-width: 768px) {
@@ -2843,15 +2843,15 @@ button {
 }
 
 .treatment-block {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .treatment-block__title {
   font-family: var(--font-heading);
-  font-size: 1.65rem;
+  font-size: 1.45rem;
   font-weight: 700;
   color: var(--primary-navy);
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.85rem;
   display: flex;
   align-items: center;
   gap: 0.65rem;
@@ -3057,23 +3057,23 @@ button {
   background: #ffffff;
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
-  padding: 2rem;
+  padding: 1.5rem 1.4rem;
   box-shadow: var(--shadow-md);
 }
 
 .sidebar-booking-card__title {
   font-family: var(--font-heading);
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--primary-navy);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .sidebar-booking-card__desc {
   font-size: 0.88rem;
   color: var(--text-muted);
   line-height: 1.5;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.15rem;
 }
 
 .sidebar-doctor-assigned {
@@ -3111,14 +3111,14 @@ button {
 .story-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3.5rem;
+  gap: 2.25rem;
   align-items: center;
 }
 
 @media (max-width: 900px) {
   .story-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.75rem;
   }
 }
 
@@ -3141,13 +3141,13 @@ button {
 .pillars-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 @media (max-width: 900px) {
   .pillars-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.25rem;
   }
 }
 
@@ -3155,42 +3155,42 @@ button {
   background: #ffffff;
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
-  padding: 2.25rem 2rem;
+  padding: 1.6rem 1.5rem;
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
 }
 
 .pillar-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-md);
   border-color: rgba(0, 212, 250, 0.4);
 }
 
 .pillar-card__icon {
-  width: 56px;
-  height: 56px;
+  width: 50px;
+  height: 50px;
   background: var(--accent-cyan-soft);
   color: var(--accent-cyan);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.75rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .pillar-card__title {
   font-family: var(--font-heading);
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--primary-navy);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .pillar-card__desc {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
-  line-height: 1.6;
+  line-height: 1.55;
 }
 
 /* Legal Pages */
@@ -3198,7 +3198,7 @@ button {
   background: #ffffff;
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
-  padding: 3rem 2.5rem;
+  padding: 2rem 2.25rem;
   box-shadow: var(--shadow-sm);
   max-width: 860px;
   margin: 0 auto;
@@ -3206,10 +3206,10 @@ button {
 
 .legal-content h2 {
   font-family: var(--font-heading);
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: var(--primary-navy);
-  margin: 2rem 0 0.85rem;
+  margin: 1.5rem 0 0.65rem;
 }
 
 .legal-content p,
@@ -3271,7 +3271,7 @@ button {
 .sedes-showcase-list {
   display: flex;
   flex-direction: column;
-  gap: 3.5rem;
+  gap: 2.25rem;
 }
 
 .sede-showcase {
@@ -3291,11 +3291,11 @@ button {
 }
 
 .sede-showcase__header {
-  padding: 2rem 2.25rem 1.5rem;
+  padding: 1.25rem 1.75rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 1.5rem;
+  gap: 1.25rem;
   border-bottom: 1px solid var(--border-light);
   background: var(--bg-card-alt);
 }
@@ -3310,11 +3310,11 @@ button {
   gap: 0.4rem;
   background: rgba(0, 212, 250, 0.12);
   color: #0284c7;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  padding: 0.3rem 0.8rem;
+  padding: 0.25rem 0.75rem;
   border-radius: var(--radius-pill);
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.45rem;
   border: 1px solid rgba(0, 212, 250, 0.3);
 }
 
@@ -3326,15 +3326,15 @@ button {
 
 .sede-showcase__title {
   font-family: var(--font-heading);
-  font-size: 1.65rem;
+  font-size: 1.45rem;
   font-weight: 800;
   color: var(--primary-navy);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.35rem;
   line-height: 1.25;
 }
 
 .sede-showcase__address {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: var(--text-muted);
   display: flex;
   align-items: center;
@@ -3357,9 +3357,9 @@ button {
 .sede-showcase__media-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  padding: 1.75rem 2.25rem;
-  height: 380px;
+  gap: 1.25rem;
+  padding: 1.25rem 1.75rem;
+  height: 310px;
 }
 
 .sede-showcase__photo-wrap {
@@ -3423,8 +3423,8 @@ button {
 .sede-showcase__info-strip {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  padding: 1.5rem 2.25rem 2rem;
+  gap: 1.25rem;
+  padding: 1.15rem 1.75rem 1.35rem;
   background: #ffffff;
   border-top: 1px solid var(--border-light);
 }
@@ -3540,10 +3540,10 @@ button {
    ========================================================================== */
 @media (max-width: 768px) {
   .page-hero {
-    padding: 3.5rem 0 2rem;
+    padding: 2.25rem 0 1.5rem;
   }
   .page-hero__title {
-    font-size: 1.85rem;
+    font-size: 1.75rem;
   }
   .page-hero__subtitle {
     font-size: 0.95rem;
@@ -3566,16 +3566,16 @@ button {
 
 @media (max-width: 640px) {
   .pillar-card {
-    padding: 1.5rem 1.25rem;
+    padding: 1.35rem 1.15rem;
   }
   .pillar-card__icon {
-    width: 48px;
-    height: 48px;
-    font-size: 1.45rem;
-    margin-bottom: 1rem;
+    width: 44px;
+    height: 44px;
+    font-size: 1.35rem;
+    margin-bottom: 0.85rem;
   }
   .pillar-card__title {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
   .legal-wrapper {
     padding: 1.75rem 1.25rem;
@@ -3584,10 +3584,10 @@ button {
 
 @media (max-width: 480px) {
   .page-hero {
-    padding: 2.75rem 0 1.75rem;
+    padding: 1.75rem 0 1.25rem;
   }
   .page-hero__title {
-    font-size: 1.55rem;
+    font-size: 1.45rem;
   }
   .page-hero__badge {
     font-size: 0.75rem;
