@@ -845,6 +845,11 @@ button {
   margin-bottom: 0.85rem;
 }
 
+.section-header > .section-title:last-child,
+.section-header > h2:last-child {
+  margin-bottom: 0;
+}
+
 .section-desc {
   font-size: 1.05rem;
   color: var(--text-muted);
