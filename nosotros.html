@@ -189,20 +189,25 @@
     </div>
   </section>
 
-  <!-- CTA Banner -->
-  <section class="section section--dark" style="text-align: center;">
-    <div class="container">
-      <h2 style="font-family: var(--font-heading); font-size: 2.1rem; font-weight: 800; margin-bottom: 0.85rem;">
-        ¿Listo Para Cuidar Tu Sonrisa?
+  <!-- ==========================================================================
+       CLOSING HIGH-IMPACT CTA BANNER
+       ========================================================================== -->
+  <section class="section prefooter-cta">
+    <div class="container prefooter-cta__container">
+      <span class="section-tag prefooter-cta__tag">
+        <i class="ri-calendar-check-line"></i> Tu Sonrisa Empieza Hoy
+      </span>
+      <h2 class="prefooter-cta__title">
+        ¿Listo Para Transformar Tu Sonrisa?
       </h2>
-      <p style="color: #cbd5e1; max-width: 520px; margin: 0 auto 1.75rem; font-size: 1rem;">
-        Agenda tu cita de evaluación en Sede Bolívar o Amarilis y recibe un plan de tratamiento claro y sin sorpresas.
+      <p class="prefooter-cta__desc">
+        Agenda tu consulta en Sede Bolívar o Sede Amarilis. Diagnóstico digital, atención sin dolor y facilidades de pago.
       </p>
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <button onclick="openModal('appointmentModal')" class="btn btn--primary btn--lg">
-          <i class="ri-calendar-check-line"></i> Agendar Evaluación
+      <div class="prefooter-cta__actions">
+        <button onclick="openModal('appointmentModal')" class="btn btn--primary prefooter-cta__btn-primary">
+          <i class="ri-calendar-check-line"></i> Agendar Cita
         </button>
-        <a href="https://wa.me/51942538705?text=Hola%20Xclusive%20Dent,%20deseo%20agendar%20una%20cita%20de%20evaluación" target="_blank" class="btn btn--whatsapp btn--lg">
+        <a href="https://wa.me/51942538705?text=Hola%20Xclusive%20Dent,%20deseo%20agendar%20una%20cita%20de%20evaluación" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp">
           <i class="ri-whatsapp-line"></i> WhatsApp Directo
         </a>
       </div>
@@ -307,45 +312,76 @@
     </a>
   </div>
 
-  <!-- Modal Citas -->
-  <div id="appointmentModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <!-- ==========================================================================
+       MODAL: AGENDAR CITA WIZARD
+       ========================================================================== -->
+  <div class="modal" id="appointmentModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal__content">
-      <button onclick="closeModal()" class="modal__close" aria-label="Cerrar ventana"><i class="ri-close-line"></i></button>
-      <div style="margin-bottom: 1.5rem;">
-        <span class="section-tag">Agenda Tu Cita</span>
-        <h3 id="modalTitle" style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--primary-navy); margin-top: 0.35rem;">Reserva Tu Evaluación Dental</h3>
+      <button class="modal__close" onclick="closeModal()" aria-label="Cerrar ventana">
+        <i class="ri-close-line"></i>
+      </button>
+
+      <div class="modal-header-compact">
+        <span class="modal-badge"><i class="ri-calendar-check-line"></i> Agenda Rápida</span>
+        <h3 id="modalTitle" class="modal-title">Reserva Tu Cita Dental</h3>
+        <p class="modal-subtitle">Atención directa por especialistas en Huánuco vía WhatsApp.</p>
       </div>
-      <form id="modalAppointmentForm">
+
+      <form id="modalAppointmentForm" class="modal-form-grid">
         <div class="form-group">
-          <label class="form-label">Tu Nombre Completo</label>
-          <input type="text" class="form-input" name="nombre" placeholder="Ej: Carlos Ramírez" required>
+          <label class="form-label">Sede de Atención:</label>
+          <div class="input-with-icon">
+            <i class="ri-map-pin-2-line"></i>
+            <select name="sede" class="form-control" required>
+              <option value="bolivar">📍 Sede Central Bolívar (Jr. Bolívar 191)</option>
+              <option value="amarilis">📍 Sede Amarilis (Óvalo Pavletich)</option>
+            </select>
+          </div>
         </div>
+
         <div class="form-group">
-          <label class="form-label">Sede de Preferencia</label>
-          <select class="form-select" name="sede" required>
-            <option value="bolivar">Sede Jr. Bolívar (Centro de Huánuco)</option>
-            <option value="amarilis">Sede Amarilis (Óvalo Pavletich)</option>
-          </select>
+          <label class="form-label">Tratamiento Requerido:</label>
+          <div class="input-with-icon">
+            <i class="ri-stethoscope-line"></i>
+            <select name="tratamiento" class="form-control" required>
+              <option value="Ortodoncia y Ortopedia Maxilar">Ortodoncia y Ortopedia Maxilar</option>
+              <option value="Implantes Dentales">Implantes Dentales</option>
+              <option value="Prótesis Dentales">Prótesis Dentales</option>
+              <option value="Restauraciones Dentales (Curaciones)">Restauraciones Dentales (Curaciones)</option>
+              <option value="Estética Dental y Diseño de Sonrisa">Estética Dental y Diseño de Sonrisa</option>
+              <option value="Periodoncia (Cuidado de Encías)">Periodoncia (Cuidado de Encías)</option>
+              <option value="Coronas en Alta Estética">Coronas en Alta Estética</option>
+              <option value="Puentes Fijos">Puentes Fijos</option>
+              <option value="Endodoncia (Tratamiento de Conductos)">Endodoncia (Tratamiento de Conductos)</option>
+              <option value="Extracción de Terceros Molares">Extracción de Terceros Molares</option>
+              <option value="Evaluación Diagnóstica General">Evaluación Diagnóstica General</option>
+              <option value="Urgencia Dental o Dolor">Urgencia Dental o Dolor</option>
+            </select>
+          </div>
         </div>
+
         <div class="form-group">
-          <label class="form-label">Tratamiento de Interés</label>
-          <select class="form-select" name="tratamiento" required>
-            <option value="Ortodoncia y Brackets">Ortodoncia y Ortopedia Maxilar</option>
-            <option value="Implantes Dentales">Implantes Dentales</option>
-            <option value="Estética y Blanqueamiento">Estética Dental & Blanqueamiento</option>
-            <option value="Prótesis Dentales">Prótesis Dentales</option>
-            <option value="Endodoncia">Endodoncia / Dolor de muela</option>
-            <option value="Extracción de Muelas del Juicio">Cirugía de Muelas del Juicio</option>
-            <option value="Evaluación General">Evaluación Odontológica Integral</option>
-          </select>
+          <label class="form-label">Tu Nombre Completo:</label>
+          <div class="input-with-icon">
+            <i class="ri-user-3-line"></i>
+            <input type="text" name="nombre" class="form-control" placeholder="Ej. Carlos Mendoza" required>
+          </div>
         </div>
+
         <div class="form-group">
-          <label class="form-label">Fecha o Día Sugerido</label>
-          <input type="date" class="form-input" name="fecha">
+          <label class="form-label">Día u Horario Preferido:</label>
+          <div class="input-with-icon">
+            <i class="ri-time-line"></i>
+            <input type="text" name="fecha" class="form-control" placeholder="Ej. Mañana o Sábado por la tarde" required>
+          </div>
         </div>
-        <button type="submit" class="btn btn--whatsapp btn--lg" style="width: 100%; margin-top: 0.5rem;">
-          <i class="ri-whatsapp-line"></i> Confirmar Cita por WhatsApp
-        </button>
+
+        <div class="modal-form-actions">
+          <button type="submit" class="btn modal-btn-whatsapp">
+            <i class="ri-whatsapp-line"></i> Continuar Cita por WhatsApp
+          </button>
+          <span class="modal-trust-note"><i class="ri-shield-check-line"></i> Respuesta inmediata en horario de atención</span>
+        </div>
       </form>
     </div>
   </div>

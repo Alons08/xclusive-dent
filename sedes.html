@@ -229,6 +229,31 @@
   </section>
 
   <!-- ==========================================================================
+       CLOSING HIGH-IMPACT CTA BANNER
+       ========================================================================== -->
+  <section class="section prefooter-cta">
+    <div class="container prefooter-cta__container">
+      <span class="section-tag prefooter-cta__tag">
+        <i class="ri-calendar-check-line"></i> Tu Sonrisa Empieza Hoy
+      </span>
+      <h2 class="prefooter-cta__title">
+        ¿Listo Para Visitar Nuestras Sedes?
+      </h2>
+      <p class="prefooter-cta__desc">
+        Te esperamos en Jr. Bolívar 191 o en Av. Esteban Pavletich 204 (Óvalo Amarilis). Agenda tu cita y recibe atención inmediata.
+      </p>
+      <div class="prefooter-cta__actions">
+        <button onclick="openModal('appointmentModal')" class="btn btn--primary prefooter-cta__btn-primary">
+          <i class="ri-calendar-check-line"></i> Agendar Cita
+        </button>
+        <a href="https://wa.me/51942538705?text=Hola%20Xclusive%20Dent,%20deseo%20visitar%20sus%20sedes" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp">
+          <i class="ri-whatsapp-line"></i> WhatsApp Directo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
        FOOTER
        ========================================================================== -->
   <footer class="footer">
@@ -325,57 +350,76 @@
     </a>
   </div>
 
-  <!-- Modal Appointment Form -->
+  <!-- ==========================================================================
+       MODAL: AGENDAR CITA WIZARD
+       ========================================================================== -->
   <div class="modal" id="appointmentModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal__content">
       <button class="modal__close" onclick="closeModal()" aria-label="Cerrar ventana">
         <i class="ri-close-line"></i>
       </button>
 
-      <div style="text-align: center; margin-bottom: 1.5rem;">
-        <span class="section-tag" style="margin-bottom: 0.4rem;">Agenda Fácil</span>
-        <h3 id="modalTitle" style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary-navy); font-weight: 800;">
-          Reserva Tu Cita Dental
-        </h3>
-        <p style="font-size: 0.9rem; color: var(--text-muted);">
-          Elige tu sede y preferencia. Te atenderemos de inmediato vía WhatsApp.
-        </p>
+      <div class="modal-header-compact">
+        <span class="modal-badge"><i class="ri-calendar-check-line"></i> Agenda Rápida</span>
+        <h3 id="modalTitle" class="modal-title">Reserva Tu Cita Dental</h3>
+        <p class="modal-subtitle">Atención directa por especialistas en Huánuco vía WhatsApp.</p>
       </div>
 
-      <form id="modalAppointmentForm" class="quick-form">
+      <form id="modalAppointmentForm" class="modal-form-grid">
         <div class="form-group">
-          <label class="form-label" style="color: var(--text-main);">Sede de Atención:</label>
-          <select name="sede" class="form-control" style="background: #ffffff; color: var(--text-main); border: 1px solid var(--border-light);" required>
-            <option value="bolivar">📍 Sede Central Bolívar (Jr. Bolívar 191)</option>
-            <option value="amarilis">📍 Sede Amarilis (Óvalo Esteban Pavletich)</option>
-          </select>
+          <label class="form-label">Sede de Atención:</label>
+          <div class="input-with-icon">
+            <i class="ri-map-pin-2-line"></i>
+            <select name="sede" class="form-control" required>
+              <option value="bolivar">📍 Sede Central Bolívar (Jr. Bolívar 191)</option>
+              <option value="amarilis">📍 Sede Amarilis (Óvalo Pavletich)</option>
+            </select>
+          </div>
         </div>
 
         <div class="form-group">
-          <label class="form-label" style="color: var(--text-main);">Tratamiento Requerido:</label>
-          <select name="tratamiento" class="form-control" style="background: #ffffff; color: var(--text-main); border: 1px solid var(--border-light);" required>
-            <option value="Ortodoncia (Brackets o Alineadores)">Ortodoncia (Brackets o Alineadores)</option>
-            <option value="Evaluación Diagnóstica General">Evaluación Diagnóstica General</option>
-            <option value="Diseño de Sonrisa / Blanqueamiento">Diseño de Sonrisa / Blanqueamiento</option>
-            <option value="Implantes Dentales y Prótesis">Implantes Dentales y Prótesis</option>
-            <option value="Limpieza Dental / Profilaxis">Limpieza Dental / Profilaxis</option>
-            <option value="Urgencia Dental o Dolor">Urgencia Dental o Dolor</option>
-          </select>
+          <label class="form-label">Tratamiento Requerido:</label>
+          <div class="input-with-icon">
+            <i class="ri-stethoscope-line"></i>
+            <select name="tratamiento" class="form-control" required>
+              <option value="Ortodoncia y Ortopedia Maxilar">Ortodoncia y Ortopedia Maxilar</option>
+              <option value="Implantes Dentales">Implantes Dentales</option>
+              <option value="Prótesis Dentales">Prótesis Dentales</option>
+              <option value="Restauraciones Dentales (Curaciones)">Restauraciones Dentales (Curaciones)</option>
+              <option value="Estética Dental y Diseño de Sonrisa">Estética Dental y Diseño de Sonrisa</option>
+              <option value="Periodoncia (Cuidado de Encías)">Periodoncia (Cuidado de Encías)</option>
+              <option value="Coronas en Alta Estética">Coronas en Alta Estética</option>
+              <option value="Puentes Fijos">Puentes Fijos</option>
+              <option value="Endodoncia (Tratamiento de Conductos)">Endodoncia (Tratamiento de Conductos)</option>
+              <option value="Extracción de Terceros Molares">Extracción de Terceros Molares</option>
+              <option value="Evaluación Diagnóstica General">Evaluación Diagnóstica General</option>
+              <option value="Urgencia Dental o Dolor">Urgencia Dental o Dolor</option>
+            </select>
+          </div>
         </div>
 
         <div class="form-group">
-          <label class="form-label" style="color: var(--text-main);">Tu Nombre Completo:</label>
-          <input type="text" name="nombre" class="form-control" style="background: #ffffff; color: var(--text-main); border: 1px solid var(--border-light);" placeholder="Ej. Carlos Mendoza" required>
+          <label class="form-label">Tu Nombre Completo:</label>
+          <div class="input-with-icon">
+            <i class="ri-user-3-line"></i>
+            <input type="text" name="nombre" class="form-control" placeholder="Ej. Carlos Mendoza" required>
+          </div>
         </div>
 
         <div class="form-group">
-          <label class="form-label" style="color: var(--text-main);">Día u Horario Preferido:</label>
-          <input type="text" name="fecha" class="form-control" style="background: #ffffff; color: var(--text-main); border: 1px solid var(--border-light);" placeholder="Ej. Lunes por la mañana o Mañana en la tarde" required>
+          <label class="form-label">Día u Horario Preferido:</label>
+          <div class="input-with-icon">
+            <i class="ri-time-line"></i>
+            <input type="text" name="fecha" class="form-control" placeholder="Ej. Mañana o Sábado por la tarde" required>
+          </div>
         </div>
 
-        <button type="submit" class="btn btn--whatsapp btn--lg" style="width: 100%; margin-top: 0.75rem;">
-          <i class="ri-whatsapp-line"></i> Continuar Cita por WhatsApp
-        </button>
+        <div class="modal-form-actions">
+          <button type="submit" class="btn modal-btn-whatsapp">
+            <i class="ri-whatsapp-line"></i> Continuar Cita por WhatsApp
+          </button>
+          <span class="modal-trust-note"><i class="ri-shield-check-line"></i> Respuesta inmediata en horario de atención</span>
+        </div>
       </form>
     </div>
   </div>
