@@ -84,7 +84,7 @@
   <!-- ==========================================================================
        TOP ANNOUNCEMENT & DIRECT CONTACT BAR
        ========================================================================== -->
-  <div class="topbar">
+    <div class="topbar">
     <div class="container topbar__content">
       <div class="topbar__left">
         <span class="topbar__badge">
@@ -116,13 +116,12 @@
 
       <nav>
         <ul class="nav__menu">
-          <li><a href="#inicio" class="nav__link active">Inicio</a></li>
-          <li><a href="#antes-despues" class="nav__link">Antes & Después</a></li>
-          <li><a href="#tratamientos" class="nav__link">Tratamientos</a></li>
-          <li><a href="#test-sonrisa" class="nav__link">Test de Sonrisa</a></li>
-          <li><a href="#sedes" class="nav__link">Sedes Huánuco</a></li>
-          <li><a href="#especialistas" class="nav__link">Especialistas</a></li>
-          <li><a href="#testimonios" class="nav__link">Pacientes</a></li>
+          <li><a href="index.html" class="nav__link active">Inicio</a></li>
+          <li><a href="nosotros.html" class="nav__link">Conócenos</a></li>
+          <li><a href="tratamientos.html" class="nav__link">Tratamientos</a></li>
+          <li><a href="especialistas.html" class="nav__link">Especialistas</a></li>
+          <li><a href="sedes.html" class="nav__link">Sedes</a></li>
+          <li><a href="testimonios.html" class="nav__link">Testimonios</a></li>
         </ul>
       </nav>
 
@@ -167,12 +166,12 @@
         </h1>
 
         <p class="hero__description">
-          Líderes en <strong>Ortodoncia de Precisión, Implantes y Diseño de Sonrisa</strong> en Huánuco. Atención personalizada sin dolor, equipamiento digital y resultados estéticos garantizados.
+          Especialistas en <strong>Ortodoncia, Implantes y Estética Dental</strong> en Huánuco. Atención sin dolor, tecnología digital y facilidades de pago.
         </p>
 
         <div class="hero__cta-group">
           <button onclick="openModal('appointmentModal')" class="btn btn--primary btn--lg">
-            <i class="ri-calendar-event-line"></i> Reservar Evaluación Dental
+            <i class="ri-calendar-event-line"></i> Agendar Evaluación
           </button>
           <a href="#antes-despues" class="btn btn--outline btn--lg">
             <i class="ri-magic-line"></i> Ver Antes y Después
@@ -182,67 +181,89 @@
         <!-- Live Statistics Counter -->
         <div class="hero__stats">
           <div class="hero__stat-item">
-            <div class="hero__stat-num counter-val" data-target="10000" data-suffix="">+10,000</div>
+            <div class="hero__stat-num counter-val" data-target="3500" data-suffix="">+3,500</div>
             <div class="hero__stat-label">Sonrisas Transformadas</div>
           </div>
           <div class="hero__stat-item">
             <div class="hero__stat-num counter-val" data-target="10" data-suffix="">+10</div>
-            <div class="hero__stat-label">Años de Experiencia</div>
+            <div class="hero__stat-label">Años de Trayectoria</div>
           </div>
           <div class="hero__stat-item">
-            <div class="hero__stat-num counter-val" data-target="6" data-suffix="">6</div>
-            <div class="hero__stat-label">Doctores Especialistas</div>
+            <div class="hero__stat-num counter-val" data-target="5" data-suffix="">5</div>
+            <div class="hero__stat-label">Especialistas Colegiados</div>
           </div>
         </div>
       </div>
 
-      <!-- Right Column: Interactive Quick Booking Card -->
+      <!-- Right Column: Medical Authority & Trust Guarantee Card (Alternativa 1) -->
       <div class="hero__card">
-        <div class="hero__card-header">
-          <span class="hero__card-tag">
-            <i class="ri-flashlight-line"></i> Cita Express Directa
+        <!-- Google Reviews & Verified Badge -->
+        <div class="hero-trust-card__badge-row">
+          <div class="hero-trust-card__google">
+            <i class="ri-google-fill" style="color: #ea4335; font-size: 1.15rem;"></i>
+            <div class="hero-trust-card__stars">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+            </div>
+            <span class="hero-trust-card__rating">5.0</span>
+          </div>
+          <span class="hero-trust-card__verified">
+            <i class="ri-shield-check-fill"></i> Verificado en Huánuco
           </span>
-          <h2 class="hero__card-title">Agenda Tu Consulta en 1 Clic</h2>
         </div>
 
-        <form id="heroQuickForm" class="quick-form">
-          <div class="form-group">
-            <label class="form-label">Elige la Sede Más Cercana:</label>
-            <select name="sede" class="form-control" required>
-              <option value="bolivar">📍 Sede Bolívar (Jr. Bolívar 191)</option>
-              <option value="amarilis">📍 Sede Amarilis (Óvalo Esteban Pavletich)</option>
-            </select>
-          </div>
+        <h2 class="hero__card-title" style="margin-top: 1rem; margin-bottom: 0.35rem; font-size: 1.35rem; line-height: 1.3;">
+          Odontología Especializada Sin Dolor
+        </h2>
+        <p style="color: #cbd5e1; font-size: 0.88rem; line-height: 1.45; margin-bottom: 1rem;">
+          Especialistas con RNE registrado, tecnología digital y presupuesto cerrado sin sorpresas.
+        </p>
 
-          <div class="form-group">
-            <label class="form-label">Tratamiento de Interés:</label>
-            <select name="tratamiento" class="form-control" required>
-              <option value="Ortodoncia (Brackets o Alineadores)">Ortodoncia (Brackets o Alineadores)</option>
-              <option value="Diseño de Sonrisa / Blanqueamiento">Diseño de Sonrisa / Blanqueamiento</option>
-              <option value="Implantes Dentales y Prótesis">Implantes Dentales y Prótesis</option>
-              <option value="Odontología Integral / Limpieza y Curaciones">Odontología Integral / Limpieza y Curaciones</option>
-              <option value="Evaluación General y Diagnóstico">Evaluación General y Diagnóstico</option>
-            </select>
+        <!-- Doctors Avatars Stack -->
+        <div class="hero-trust-card__doctors">
+          <div class="hero-doctor-avatars">
+            <img src="assets/images/doctors/doctor_ronald_alvarez.jpg" alt="Dr. Ronald Álvarez" class="hero-doctor-avatar" title="Dr. Ronald Álvarez (Ortodoncia RNE 06086 / Implantes RNE 05794)">
+            <img src="assets/images/doctors/doctor_kenyi_gonzales.jpeg" alt="Dr. Kenyi Gonzales" class="hero-doctor-avatar" title="Dr. Kenyi Gonzales (Cirugía Bucal y Maxilofacial RNE 6074)">
+            <img src="assets/images/doctors/doctora_ilusion_ortiz.jpg" alt="Dra. Ilusión Ortiz" class="hero-doctor-avatar" title="Dra. Ilusión Ortiz (COP 45896)">
+            <img src="assets/images/doctors/doctora_rocio_alvarez.jpg" alt="Dra. Rocío Álvarez" class="hero-doctor-avatar" title="Dra. Rocío Álvarez (COP 42465)">
+            <img src="assets/images/doctors/doctora_rosemaria_mallqui.jpg" alt="Dra. Rosemaria Mallqui" class="hero-doctor-avatar" title="Dra. Rosemaria Mallqui (COP 54696)">
+            <div class="hero-doctor-avatar-more">5</div>
           </div>
-
-          <div class="form-group">
-            <label class="form-label">Tu Nombre y Apellido:</label>
-            <input type="text" name="nombre" class="form-control" placeholder="Ej. Juan Pérez" required>
+          <div class="hero-trust-card__doctors-info">
+            <strong style="color: #ffffff; font-size: 0.85rem; display: block;">5 Médicos Colegiados</strong>
+            <span style="color: var(--accent-cyan); font-size: 0.75rem; font-weight: 600;">Especialistas Perú - Brasil</span>
           </div>
+        </div>
 
-          <div class="form-group">
-            <label class="form-label">¿Qué día prefieres tu cita?:</label>
-            <input type="text" name="fecha" class="form-control" placeholder="Ej. Mañana en la tarde o Sábado" required>
+        <!-- 3 Core Guarantees -->
+        <div class="hero-trust-card__points">
+          <div class="hero-trust-point">
+            <i class="ri-government-fill" style="color: var(--accent-cyan);"></i>
+            <span><strong>Categorizados por SUSALUD:</strong> Bioseguridad total.</span>
           </div>
+          <div class="hero-trust-point">
+            <i class="ri-money-dollar-circle-fill" style="color: #10b981;"></i>
+            <span><strong>Presupuesto Cerrado:</strong> Sin cobros imprevistos.</span>
+          </div>
+          <div class="hero-trust-point">
+            <i class="ri-map-pin-2-fill" style="color: #f59e0b;"></i>
+            <span><strong>2 Sedes:</strong> Jr. Bolívar 191 y Óvalo Pavletich.</span>
+          </div>
+        </div>
 
-          <button type="submit" class="btn btn--whatsapp btn--lg" style="width: 100%; margin-top: 0.5rem;">
-            <i class="ri-whatsapp-line"></i> Confirmar Cita por WhatsApp
+        <!-- Direct Fast Action CTAs -->
+        <div style="display: flex; flex-direction: column; gap: 0.65rem; margin-top: 1.15rem;">
+          <button onclick="openModal('appointmentModal')" class="btn btn--primary" style="width: 100%; justify-content: center; box-shadow: 0 8px 24px rgba(0, 212, 250, 0.35);">
+            <i class="ri-calendar-check-line"></i> Solicitar Cita
           </button>
+          <a href="https://wa.me/51942538705?text=Hola%20Xclusive%20Dent,%20deseo%20agendar%20una%20cita%20de%20evaluación" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp" style="width: 100%; justify-content: center;">
+            <i class="ri-whatsapp-line"></i> WhatsApp Directo
+          </a>
+        </div>
 
-          <div class="quick-form__trust">
-            <i class="ri-lock-2-line"></i> Atención directa por recepción de la clínica
-          </div>
-        </form>
+        <!-- Trust footer -->
+        <div style="margin-top: 0.85rem; text-align: center; color: #94a3b8; font-size: 0.78rem; display: flex; align-items: center; justify-content: center; gap: 0.4rem;">
+          <i class="ri-time-line" style="color: var(--accent-mint);"></i> Respuesta en recepción: menos de 5 min
+        </div>
       </div>
     </div>
   </section>
@@ -310,8 +331,8 @@
       <div class="smile-showcase">
         <!-- Draggable Image Slider -->
         <div class="slider-container" id="sliderContainer">
-          <span class="slider-badge slider-badge--before">Antes (Tratamiento)</span>
-          <span class="slider-badge slider-badge--after">Después (Xclusive)</span>
+          <span class="slider-badge slider-badge--before">Antes</span>
+          <span class="slider-badge slider-badge--after">Después</span>
 
           <!-- After Image (Background) -->
           <img src="assets/images/after_smile.jpg" alt="Sonrisa perfecta después de ortodoncia en Xclusive Dent" class="slider-img slider-img--after">
@@ -333,30 +354,30 @@
         <!-- Explanatory Information -->
         <div class="smile-info">
           <span class="smile-info__badge">
-            <i class="ri-checkbox-circle-fill"></i> Caso Clínico de Ortodoncia de Precisión
+            <i class="ri-checkbox-circle-fill"></i> Ortodoncia de Precisión
           </span>
-          <h3 class="smile-info__title">Resultados Visibles y Armonía Facial Total</h3>
+          <h3 class="smile-info__title">Resultados Visibles y Armonía Total</h3>
           <p class="smile-info__text">
-            En Xclusive Dent no solo alineamos tus dientes: estudiamos la estética completa de tu rostro, la línea de tu sonrisa y la oclusión funcional para darte una mordida sana y una sonrisa radiante de por vida.
+            Alineamos tus dientes y corregimos tu mordida cuidando la estética de tu rostro de por vida.
           </p>
 
           <div class="smile-features">
             <div class="smile-feature-item">
               <i class="ri-check-line"></i>
-              <span>Brackets de autoligado, estéticos y alineadores invisibles.</span>
+              <span>Brackets de autoligado y alineadores invisibles.</span>
             </div>
             <div class="smile-feature-item">
               <i class="ri-check-line"></i>
-              <span>Tiempos de tratamiento optimizados gracias a planificación digital.</span>
+              <span>Menor tiempo de tratamiento con tecnología digital.</span>
             </div>
             <div class="smile-feature-item">
               <i class="ri-check-line"></i>
-              <span>Planes de pago mensuales sin intereses al alcance de tu presupuesto.</span>
+              <span>Planes de financiamiento en cuotas sin intereses.</span>
             </div>
           </div>
 
-          <button onclick="openModal('appointmentModal')" class="btn btn--primary btn--lg">
-            <i class="ri-whatsapp-line"></i> Quiero una Evaluación para mi Sonrisa
+          <button onclick="openModal('appointmentModal')" class="btn btn--primary" style="width: 100%;">
+            <i class="ri-calendar-check-line"></i> Agendar Mi Evaluación
           </button>
         </div>
       </div>
@@ -364,292 +385,331 @@
   </section>
 
   <!-- ==========================================================================
-       TREATMENTS & SERVICES (INTERACTIVE TABS)
+       TREATMENTS & SERVICES (6 FLAGSHIP PILLARS + FULL CATALOG LINK)
        ========================================================================== -->
   <section id="tratamientos" class="section section--alt">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Nuestras Especialidades</span>
-        <h2 class="section-title">Soluciones Dentales de Primer Nivel</h2>
+        <span class="section-tag"><i class="ri-shield-star-line"></i> Especialidades Principales</span>
+        <h2 class="section-title">Tratamientos Clínicos Avanzados</h2>
         <p class="section-desc">
-          Contamos con especialistas dedicados en cada rama odontológica para brindarte un diagnóstico integral en un solo lugar.
+          Atención especializada liderada por odontólogos con RNE registrado, tecnología digital e insumos certificados para resultados duraderos y sin dolor.
         </p>
       </div>
 
-      <!-- Category Filter Tabs -->
-      <div class="services-nav">
-        <button class="services-tab active" data-filter="all">Todos los Tratamientos</button>
-        <button class="services-tab" data-filter="ortodoncia">Ortodoncia</button>
-        <button class="services-tab" data-filter="implantes">Implantes & Prótesis</button>
-        <button class="services-tab" data-filter="estetica">Estética & Blanqueamiento</button>
-        <button class="services-tab" data-filter="general">Odontología Integral</button>
-      </div>
-
-      <!-- Services Grid -->
+      <!-- Treatments Grid (6 Initial + 4 Expandable) -->
       <div class="services-grid">
-        <!-- Service 1: Ortodoncia -->
-        <article class="service-card" data-category="ortodoncia">
+        
+        <!-- Treatment 1: Ortodoncia -->
+        <article class="service-card">
           <div class="service-card__top">
-            <img src="assets/images/after_smile.jpg" alt="Ortodoncia y Brackets" class="service-card__img">
-            <span class="service-card__tag">Especialidad Estrella</span>
+            <img src="assets/images/after_smile.jpg" alt="Ortodoncia y Ortopedia Maxilar" class="service-card__img" loading="lazy">
+            <span class="service-card__tag">Alta Especialidad</span>
           </div>
           <div class="service-card__body">
-            <div class="service-card__icon"><i class="ri-emotion-happy-line"></i></div>
-            <h3 class="service-card__title">Ortodoncia & Ortopedia Maxilar</h3>
+            <h3 class="service-card__title">Ortodoncia y Ortopedia Maxilar</h3>
             <p class="service-card__desc">
-              Alineación dental avanzada para niños, jóvenes y adultos. Brackets metálicos, cerámicos, zafiro y alineadores sin metal con el respaldo de la escuela ortodóntica brasileña.
+              Alineación y corrección de mordida con brackets de autoligado pasivo y ortopedia preventiva. Menos tiempo y sin dolor.
             </p>
-            <ul class="service-card__benefits">
-              <li class="service-card__benefit"><i class="ri-check-line"></i> Corrección de mordida y apiñamiento</li>
-              <li class="service-card__benefit"><i class="ri-check-line"></i> Opciones estéticas invisibles</li>
-              <li class="service-card__benefit"><i class="ri-check-line"></i> Facilidades de pago en cuotas</li>
-            </ul>
             <div class="service-card__footer">
-              <a href="https://wa.me/51942538705?text=Hola%20Xclusive%20Dent,%20deseo%20información%20sobre%20el%20tratamiento%20de%20Ortodoncia" target="_blank" class="service-card__link">
-                Consultar por WhatsApp <i class="ri-arrow-right-line"></i>
+              <a href="tratamientos/ortodoncia.html" class="service-card__link">
+                Ver Tratamiento <i class="ri-arrow-right-line"></i>
               </a>
             </div>
           </div>
         </article>
 
-        <!-- Service 2: Implantes -->
-        <article class="service-card" data-category="implantes">
+        <!-- Treatment 2: Implantes Dentales -->
+        <article class="service-card">
           <div class="service-card__top">
-            <img src="assets/images/services/implante_dental.jpg" alt="Implantología y Prótesis" class="service-card__img">
-            <span class="service-card__tag">Alta Precisión</span>
+            <img src="assets/images/services/implante_dental.jpg" alt="Implantes Dentales" class="service-card__img" loading="lazy">
+            <span class="service-card__tag">Rehabilitación Definitiva</span>
           </div>
           <div class="service-card__body">
-            <div class="service-card__icon"><i class="ri-shield-cross-line"></i></div>
-            <h3 class="service-card__title">Implantología Oral & Prótesis</h3>
+            <h3 class="service-card__title">Implantes Dentales</h3>
             <p class="service-card__desc">
-              Recupera las piezas dentales perdidas con implantes de titanio osteointegrados y coronas de porcelana de apariencia 100% natural, devolviendo la fuerza al masticar.
+              Recupera tus piezas perdidas con raíces de titanio biocompatibles y coronas fijas. Devuelve tu fuerza al masticar.
             </p>
-            <ul class="service-card__benefits">
-              <li class="service-card__benefit"><i class="ri-check-line"></i> Aspecto y sensación de diente natural</li>
-              <li class="service-card__benefit"><i class="ri-check-line"></i> Materiales biocompatibles certificados</li>
-              <li class="service-card__benefit"><i class="ri-check-line"></i> Procedimiento seguro y guiado</li>
-            </ul>
             <div class="service-card__footer">
-              <a href="https://wa.me/51942538705?text=Hola%20Xclusive%20Dent,%20deseo%20información%20sobre%20Implantes%20Dentales" target="_blank" class="service-card__link">
-                Consultar por WhatsApp <i class="ri-arrow-right-line"></i>
+              <a href="tratamientos/implantologia.html" class="service-card__link">
+                Ver Tratamiento <i class="ri-arrow-right-line"></i>
               </a>
             </div>
           </div>
         </article>
 
-        <!-- Service 3: Estética -->
-        <article class="service-card" data-category="estetica">
+        <!-- Treatment 3: Prótesis Dentales -->
+        <article class="service-card">
           <div class="service-card__top">
-            <img src="assets/images/services/blanqueamiento_led.jpg" alt="Diseño de Sonrisa y Blanqueamiento" class="service-card__img">
-            <span class="service-card__tag">Estética Premium</span>
+            <img src="assets/images/sede_bolivar.jpg" alt="Prótesis Dentales" class="service-card__img" loading="lazy">
+            <span class="service-card__tag">Funcionalidad Total</span>
           </div>
           <div class="service-card__body">
-            <div class="service-card__icon"><i class="ri-sparkling-2-line"></i></div>
-            <h3 class="service-card__title">Diseño de Sonrisa & Blanqueamiento</h3>
+            <h3 class="service-card__title">Prótesis Dentales</h3>
             <p class="service-card__desc">
-              Carillas de resina y porcelana de alta estética, junto con blanqueamiento dental LED que aclara varios tonos en una sola sesión sin debilitar el esmalte dental.
+              Prótesis totales, removibles y flexibles diseñadas a medida para recuperar tu sonrisa, fonética y masticación cómoda.
             </p>
-            <ul class="service-card__benefits">
-              <li class="service-card__benefit"><i class="ri-check-line"></i> Dientes blancos y radiantes al instante</li>
-              <li class="service-card__benefit"><i class="ri-check-line"></i> Corrección de forma, bordes y manchas</li>
-              <li class="service-card__benefit"><i class="ri-check-line"></i> Sonrisa armónica con tus facciones</li>
-            </ul>
             <div class="service-card__footer">
-              <a href="https://wa.me/51942538705?text=Hola%20Xclusive%20Dent,%20deseo%20información%20sobre%20Blanqueamiento%20y%20Diseño%20de%20Sonrisa" target="_blank" class="service-card__link">
-                Consultar por WhatsApp <i class="ri-arrow-right-line"></i>
+              <a href="tratamientos/protesis.html" class="service-card__link">
+                Ver Tratamiento <i class="ri-arrow-right-line"></i>
               </a>
             </div>
           </div>
         </article>
 
-        <!-- Service 4: Odontología Integral -->
-        <article class="service-card" data-category="general">
+        <!-- Treatment 4: Restauraciones Dentales -->
+        <article class="service-card">
           <div class="service-card__top">
-            <img src="assets/images/services/odontologia_curacion.jpg" alt="Odontología Integral y Curaciones" class="service-card__img">
-            <span class="service-card__tag">Cuidado Familiar</span>
+            <img src="assets/images/services/odontologia_curacion.jpg" alt="Restauraciones Dentales" class="service-card__img" loading="lazy">
+            <span class="service-card__tag">Estética & Salud</span>
           </div>
           <div class="service-card__body">
-            <div class="service-card__icon"><i class="ri-heart-pulse-line"></i></div>
-            <h3 class="service-card__title">Odontología Integral & Curaciones</h3>
+            <h3 class="service-card__title">Restauraciones Dentales</h3>
             <p class="service-card__desc">
-              Tratamiento de caries con resinas estéticas de última generación, profilaxis profunda con ultrasonido para eliminar sarro y odontopediatría especializada para niños.
+              Curaciones con resinas estéticas de alta resistencia e incrustaciones que eliminan caries y reconstruyen la pieza sin dolor.
             </p>
-            <ul class="service-card__benefits">
-              <li class="service-card__benefit"><i class="ri-check-line"></i> Curaciones libres de amalgama</li>
-              <li class="service-card__benefit"><i class="ri-check-line"></i> Eliminación de placa y sarro dental</li>
-              <li class="service-card__benefit"><i class="ri-check-line"></i> Atención sin dolor ni ansiedad</li>
-            </ul>
             <div class="service-card__footer">
-              <a href="https://wa.me/51942538705?text=Hola%20Xclusive%20Dent,%20deseo%20agendar%20una%20Limpieza%20Dental%20o%20Curación" target="_blank" class="service-card__link">
-                Consultar por WhatsApp <i class="ri-arrow-right-line"></i>
+              <a href="tratamientos/restauraciones-dentales.html" class="service-card__link">
+                Ver Tratamiento <i class="ri-arrow-right-line"></i>
               </a>
             </div>
           </div>
         </article>
 
-        <!-- Service 5: Endodoncia & Rehabilitación -->
-        <article class="service-card" data-category="general">
+        <!-- Treatment 5: Estética Dental -->
+        <article class="service-card">
           <div class="service-card__top">
-            <img src="assets/images/sede_amarilis.jpg" alt="Endodoncia y Rehabilitación Oral" class="service-card__img">
-            <span class="service-card__tag">Salva tu Diente</span>
+            <img src="assets/images/services/blanqueamiento_led.jpg" alt="Estética Dental y Diseño de Sonrisa" class="service-card__img" loading="lazy">
+            <span class="service-card__tag">Diseño Exclusivo</span>
           </div>
           <div class="service-card__body">
-            <div class="service-card__icon"><i class="ri-shield-flash-line"></i></div>
-            <h3 class="service-card__title">Endodoncia & Alivio del Dolor</h3>
+            <h3 class="service-card__title">Estética Dental</h3>
             <p class="service-card__desc">
-              Salva tus dientes naturales afectados por infecciones profundas. Tratamiento de conducto mecanizado y digital, seguro, rápido y con máxima analgesia.
+              Carillas de disilicato de litio, resinas de alta estética y blanqueamiento LED para una sonrisa armónica y luminosa.
             </p>
-            <ul class="service-card__benefits">
-              <li class="service-card__benefit"><i class="ri-check-line"></i> Detiene el dolor dental de inmediato</li>
-              <li class="service-card__benefit"><i class="ri-check-line"></i> Evita la extracción de la pieza</li>
-              <li class="service-card__benefit"><i class="ri-check-line"></i> Tecnología rotatoria moderna</li>
-            </ul>
             <div class="service-card__footer">
-              <a href="https://wa.me/51942538705?text=Hola%20Xclusive%20Dent,%20tengo%20dolor%20dental%20y%20necesito%20atención" target="_blank" class="service-card__link">
-                Consultar por WhatsApp <i class="ri-arrow-right-line"></i>
+              <a href="tratamientos/estetica-dental.html" class="service-card__link">
+                Ver Tratamiento <i class="ri-arrow-right-line"></i>
               </a>
             </div>
           </div>
         </article>
 
-        <!-- Service 6: Cirugía Bucal -->
-        <article class="service-card" data-category="general">
+        <!-- Treatment 6: Periodoncia -->
+        <article class="service-card">
           <div class="service-card__top">
-            <img src="assets/images/services/cirugia_radiografia.jpg" alt="Cirugía Bucal y Terceras Molares" class="service-card__img">
-            <span class="service-card__tag">Cirugía Menor</span>
+            <img src="assets/images/sede_amarilis.jpg" alt="Periodoncia y Cuidado de Encías" class="service-card__img" loading="lazy">
+            <span class="service-card__tag">Salud de Encías</span>
           </div>
           <div class="service-card__body">
-            <div class="service-card__icon"><i class="ri-stethoscope-line"></i></div>
-            <h3 class="service-card__title">Extracción de Muelas del Juicio</h3>
+            <h3 class="service-card__title">Periodoncia</h3>
             <p class="service-card__desc">
-              Cirugía bucal menor para terceras molares impactadas o complejas con mínima invasión y recuperación acelerada, evitando desalineación en el resto de tu dentadura.
+              Tratamiento de gingivitis, sangrado de encías y detartraje ultrasónico profundo para proteger el soporte de tus dientes.
             </p>
-            <ul class="service-card__benefits">
-              <li class="service-card__benefit"><i class="ri-check-line"></i> Anestesia local de acción profunda</li>
-              <li class="service-card__benefit"><i class="ri-check-line"></i> Protocolo postoperatorio guiado</li>
-              <li class="service-card__benefit"><i class="ri-check-line"></i> Instrumental quirúrgico esterilizado</li>
-            </ul>
             <div class="service-card__footer">
-              <a href="https://wa.me/51942538705?text=Hola%20Xclusive%20Dent,%20deseo%20evaluación%20para%20muelas%20del%20juicio" target="_blank" class="service-card__link">
-                Consultar por WhatsApp <i class="ri-arrow-right-line"></i>
+              <a href="tratamientos/periodoncia.html" class="service-card__link">
+                Ver Tratamiento <i class="ri-arrow-right-line"></i>
               </a>
             </div>
           </div>
         </article>
+
+        <!-- Treatment 7: Coronas en Alta Estética (EXTRA) -->
+        <article class="service-card service-card--extra">
+          <div class="service-card__top">
+            <img src="assets/images/sede_bolivar.jpg" alt="Coronas en Alta Estética Dental" class="service-card__img" loading="lazy">
+            <span class="service-card__tag">Zirconio & Porcelana</span>
+          </div>
+          <div class="service-card__body">
+            <h3 class="service-card__title">Coronas en Alta Estética</h3>
+            <p class="service-card__desc">
+              Fundas libres de metal en zirconio que restauran dientes fracturados o desgastados con apariencia natural y duradera.
+            </p>
+            <div class="service-card__footer">
+              <a href="tratamientos/coronas-esteticas.html" class="service-card__link">
+                Ver Tratamiento <i class="ri-arrow-right-line"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Treatment 8: Puentes Fijos (EXTRA) -->
+        <article class="service-card service-card--extra">
+          <div class="service-card__top">
+            <img src="assets/images/services/implante_dental.jpg" alt="Puentes Fijos" class="service-card__img" loading="lazy">
+            <span class="service-card__tag">Prótesis Fija</span>
+          </div>
+          <div class="service-card__body">
+            <h3 class="service-card__title">Puentes Fijos</h3>
+            <p class="service-card__desc">
+              Reposición permanente de una o más piezas dentales faltantes mediante estructuras cerámicas fijas, sin placas removibles.
+            </p>
+            <div class="service-card__footer">
+              <a href="tratamientos/puentes-fijos.html" class="service-card__link">
+                Ver Tratamiento <i class="ri-arrow-right-line"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Treatment 9: Endodoncia (EXTRA) -->
+        <article class="service-card service-card--extra">
+          <div class="service-card__top">
+            <img src="assets/images/services/endodoncia_clinica.jpg" alt="Endodoncia y Tratamiento de Conductos" class="service-card__img" loading="lazy">
+            <span class="service-card__tag">Alivio del Dolor</span>
+          </div>
+          <div class="service-card__body">
+            <h3 class="service-card__title">Endodoncia</h3>
+            <p class="service-card__desc">
+              Tratamiento de conductos con instrumental rotatorio mecanizado para salvar dientes con infección o dolor agudo sin extraerlos.
+            </p>
+            <div class="service-card__footer">
+              <a href="tratamientos/endodoncia.html" class="service-card__link">
+                Ver Tratamiento <i class="ri-arrow-right-line"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Treatment 10: Extracción de Terceros Molares (EXTRA) -->
+        <article class="service-card service-card--extra">
+          <div class="service-card__top">
+            <img src="assets/images/services/cirugia_radiografia.jpg" alt="Extracción de Terceros Molares" class="service-card__img" loading="lazy">
+            <span class="service-card__tag">Cirugía Maxilofacial</span>
+          </div>
+          <div class="service-card__body">
+            <h3 class="service-card__title">Extracción de Terceros Molares</h3>
+            <p class="service-card__desc">
+              Cirugía de muelas del juicio retenidas o impactadas por especialista maxilofacial con mínima invasión y rápida recuperación.
+            </p>
+            <div class="service-card__footer">
+              <a href="tratamientos/terceros-molares.html" class="service-card__link">
+                Ver Tratamiento <i class="ri-arrow-right-line"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
       </div>
+
+      <!-- Action: Toggle Ver Más -->
+      <div class="treatments-toggle-wrap" style="margin-top: 2.75rem; text-align: center; display: flex; justify-content: center;">
+        <button id="btnToggleTreatments" class="btn btn--primary" type="button" aria-expanded="false" style="padding: 0.95rem 2.2rem; font-weight: 700; border-radius: var(--radius-pill); cursor: pointer; display: inline-flex; align-items: center; gap: 0.65rem; box-shadow: 0 4px 15px rgba(0, 212, 250, 0.35);">
+          <span id="btnToggleTreatmentsText">Ver Más</span>
+          <i id="btnToggleTreatmentsIcon" class="ri-arrow-down-s-line" style="font-size: 1.25rem;"></i>
+        </button>
+      </div>
+
     </div>
   </section>
 
   <!-- ==========================================================================
-       INTERACTIVE SMILE DIAGNOSTIC QUIZ (LEAD MAGNET INTERACTIVO)
+       CERTIFIED BRANDS & WORLD-CLASS MATERIALS (MARCAS Y MATERIALES)
        ========================================================================== -->
-  <section id="test-sonrisa" class="section section--dark">
+  <section class="brands-section" id="marcas">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Test Interactivo Gratuito</span>
-        <h2 class="section-title">Diagnóstico Express: ¿Qué Tratamiento Necesita Tu Sonrisa?</h2>
+      <div class="brands-header">
+        <span class="section-tag">Garantía y Biocompatibilidad Internacional</span>
+        <h2 class="section-title">Insumos y Tecnología Odontológica de Élite Mundial</h2>
         <p class="section-desc">
-          Responde 3 preguntas breves y descubre qué tratamiento se adapta mejor a lo que tu boca necesita.
+          En Xclusive Dent no escatimamos en tu salud. Trabajamos exclusivamente con instrumental, brackets de precisión y resinas certificadas por los laboratorios odontológicos más prestigiosos de Brasil, EE.UU. y Europa.
         </p>
       </div>
 
-      <div class="quiz-wrapper">
-        <div id="quizQuestionsArea">
-          <div class="quiz-progress">
-            <span style="font-weight: 700; font-size: 0.85rem; color: var(--accent-cyan);">Paso <span id="quizStepNumber">1/3</span></span>
-            <div class="quiz-progress__bar-bg">
-              <div class="quiz-progress__bar" id="quizProgressBar"></div>
+      <!-- Continuous Infinite Carousel (Marquee) -->
+      <div class="brands-carousel">
+        <div class="brands-track">
+          <!-- Set 1 -->
+          <div class="brand-item">
+            <div class="brand-item__logo-wrap">
+              <img src="assets/images/brands/brand_morelli.svg" alt="Morelli Ortodontia Brasil" class="brand-item__logo" loading="lazy">
             </div>
-            <span style="font-size: 0.85rem; color: #94a3b8;">Xclusive Dental Test</span>
+            <span class="brand-item__label">Ortodoncia de Precisión (Brasil)</span>
           </div>
 
-          <!-- Step 1 -->
-          <div class="quiz-step active" data-step="1">
-            <h3 class="quiz-question">1. ¿Qué es lo que más te gustaría mejorar de tu boca?</h3>
-            <div class="quiz-options">
-              <div class="quiz-option" data-key="concern" data-val="alineacion">
-                <i class="ri-align-center quiz-option__icon"></i>
-                <div class="quiz-option__title">Dientes Chuecos o Apiñados</div>
-                <div class="quiz-option__desc">Quiero enderezar mis dientes y mejorar mi mordida</div>
-              </div>
-              <div class="quiz-option" data-key="concern" data-val="manchas">
-                <i class="ri-sparkling-fill quiz-option__icon"></i>
-                <div class="quiz-option__title">Color Amarillo o Manchas</div>
-                <div class="quiz-option__desc">Quiero dientes más blancos y una sonrisa brillante</div>
-              </div>
-              <div class="quiz-option" data-key="concern" data-val="perdida">
-                <i class="ri-heart-add-line quiz-option__icon"></i>
-                <div class="quiz-option__title">Me Falta Algún Diente o Muela</div>
-                <div class="quiz-option__desc">Necesito recuperar una pieza perdida para masticar bien</div>
-              </div>
+          <div class="brand-item">
+            <div class="brand-item__logo-wrap">
+              <img src="assets/images/brands/brand_orthometric.svg" alt="Orthometric Brasil" class="brand-item__logo" loading="lazy">
             </div>
+            <span class="brand-item__label">Aparatología Avanzada (Brasil)</span>
           </div>
 
-          <!-- Step 2 -->
-          <div class="quiz-step" data-step="2">
-            <h3 class="quiz-question">2. ¿Cuánto tiempo llevas con esta molestia o deseo de cambio?</h3>
-            <div class="quiz-options">
-              <div class="quiz-option" data-key="duration" data-val="reciente">
-                <i class="ri-time-line quiz-option__icon"></i>
-                <div class="quiz-option__title">Menos de 6 meses</div>
-                <div class="quiz-option__desc">Quiero empezar cuanto antes</div>
-              </div>
-              <div class="quiz-option" data-key="duration" data-val="mas-un-ano">
-                <i class="ri-calendar-todo-line quiz-option__icon"></i>
-                <div class="quiz-option__title">Más de 1 año</div>
-                <div class="quiz-option__desc">Lo he venido postergando y ya decidí solucionarlo</div>
-              </div>
+          <div class="brand-item">
+            <div class="brand-item__logo-wrap">
+              <img src="assets/images/brands/brand_ivoclar.svg" alt="Ivoclar Vivadent" class="brand-item__logo" loading="lazy">
             </div>
+            <span class="brand-item__label">Estética y Cerámicas (Europa)</span>
           </div>
 
-          <!-- Step 3 -->
-          <div class="quiz-step" data-step="3">
-            <h3 class="quiz-question">3. ¿En qué sede de Huánuco te gustaría atenderte?</h3>
-            <div class="quiz-options">
-              <div class="quiz-option" data-key="sede" data-val="bolivar">
-                <i class="ri-map-pin-2-line quiz-option__icon"></i>
-                <div class="quiz-option__title">Sede Jr. Bolívar</div>
-                <div class="quiz-option__desc">Centro de Huánuco - Cerca a la Plaza</div>
-              </div>
-              <div class="quiz-option" data-key="sede" data-val="amarilis">
-                <i class="ri-community-line quiz-option__icon"></i>
-                <div class="quiz-option__title">Sede Amarilis</div>
-                <div class="quiz-option__desc">Av. Esteban Pavletich - Frente al Grifo</div>
-              </div>
+          <div class="brand-item">
+            <div class="brand-item__logo-wrap">
+              <img src="assets/images/brands/brand_3m.svg" alt="3M ESPE Dental" class="brand-item__logo" loading="lazy">
             </div>
+            <span class="brand-item__label">Biomateriales y Adhesión (EE.UU.)</span>
           </div>
 
-          <!-- Controls -->
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem;">
-            <button id="quizBtnPrev" class="btn btn--outline" style="display: none;">
-              ← Anterior
-            </button>
-            <div style="margin-left: auto;">
-              <button id="quizBtnNext" class="btn btn--primary btn--lg" disabled>
-                Siguiente Pregunta →
-              </button>
+          <div class="brand-item">
+            <div class="brand-item__logo-wrap">
+              <img src="assets/images/brands/brand_kerr.svg" alt="Kerr Dental" class="brand-item__logo" loading="lazy">
             </div>
+            <span class="brand-item__label">Resinas de Alta Gama (EE.UU.)</span>
           </div>
-        </div>
 
-        <!-- Result Box (Hidden by default) -->
-        <div id="quizResultArea" style="display: none;" class="quiz-result">
-          <div class="quiz-result__icon">
-            <i class="ri-check-double-line"></i>
+          <div class="brand-item">
+            <div class="brand-item__logo-wrap">
+              <img src="assets/images/brands/brand_coi.svg" alt="COI Centro Odontológico" class="brand-item__logo" loading="lazy">
+            </div>
+            <span class="brand-item__label">Implantología y Formación</span>
           </div>
-          <span class="section-tag" style="background: rgba(0,212,250,0.2);">Tratamiento Recomendado Para Ti</span>
-          <h3 class="quiz-result__treatment" id="quizResultTreatment">Ortodoncia Avanzada & Estética</h3>
-          <p class="quiz-result__desc" id="quizResultDesc">
-            Tu sonrisa califica para una alineación dental de alta precisión. Corrige tu mordida y presume una sonrisa simétrica de por vida.
-          </p>
 
-          <button id="quizBtnClaim" class="btn btn--whatsapp btn--lg">
-            <i class="ri-whatsapp-line"></i> Consultar Disponibilidad por WhatsApp
-          </button>
+          <!-- Set 2 (Duplicate for continuous seamless infinite loop) -->
+          <div class="brand-item" aria-hidden="true">
+            <div class="brand-item__logo-wrap">
+              <img src="assets/images/brands/brand_morelli.svg" alt="Morelli Ortodontia Brasil" class="brand-item__logo" loading="lazy">
+            </div>
+            <span class="brand-item__label">Ortodoncia de Precisión (Brasil)</span>
+          </div>
+
+          <div class="brand-item" aria-hidden="true">
+            <div class="brand-item__logo-wrap">
+              <img src="assets/images/brands/brand_orthometric.svg" alt="Orthometric Brasil" class="brand-item__logo" loading="lazy">
+            </div>
+            <span class="brand-item__label">Aparatología Avanzada (Brasil)</span>
+          </div>
+
+          <div class="brand-item" aria-hidden="true">
+            <div class="brand-item__logo-wrap">
+              <img src="assets/images/brands/brand_ivoclar.svg" alt="Ivoclar Vivadent" class="brand-item__logo" loading="lazy">
+            </div>
+            <span class="brand-item__label">Estética y Cerámicas (Europa)</span>
+          </div>
+
+          <div class="brand-item" aria-hidden="true">
+            <div class="brand-item__logo-wrap">
+              <img src="assets/images/brands/brand_3m.svg" alt="3M ESPE Dental" class="brand-item__logo" loading="lazy">
+            </div>
+            <span class="brand-item__label">Biomateriales y Adhesión (EE.UU.)</span>
+          </div>
+
+          <div class="brand-item" aria-hidden="true">
+            <div class="brand-item__logo-wrap">
+              <img src="assets/images/brands/brand_kerr.svg" alt="Kerr Dental" class="brand-item__logo" loading="lazy">
+            </div>
+            <span class="brand-item__label">Resinas de Alta Gama (EE.UU.)</span>
+          </div>
+
+          <div class="brand-item" aria-hidden="true">
+            <div class="brand-item__logo-wrap">
+              <img src="assets/images/brands/brand_coi.svg" alt="COI Centro Odontológico" class="brand-item__logo" loading="lazy">
+            </div>
+            <span class="brand-item__label">Implantología y Formación</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
+
 
   <!-- ==========================================================================
        SEDES & LIVE SCHEDULE (HUÁNUCO & AMARILIS)
@@ -668,7 +728,7 @@
         <!-- Sede Bolívar -->
         <article class="sede-card">
           <div class="sede-card__image-wrap">
-            <img src="assets/images/sede_bolivar.jpg" alt="Instalaciones Sede Bolívar Xclusive Dent Huánuco" class="sede-card__img">
+            <img src="assets/images/sedes/sede_bolivar_real.png" alt="Instalaciones y Fachada Sede Bolívar Xclusive Dent Huánuco" class="sede-card__img" loading="lazy">
             <div class="sede-card__status" id="statusBolivar">
               <span class="status-indicator"></span> Calculando horario...
             </div>
@@ -678,13 +738,13 @@
             <h3 class="sede-card__title">Sede Central Bolívar</h3>
             <div class="sede-card__address">
               <i class="ri-map-pin-2-fill"></i>
-              <span>Jr. Prolongación Bolívar 191, Huánuco (Cerca a centros principales).</span>
+              <span>Jr. Prolongación Bolívar 191, segundo piso de Mapfre, Huánuco.</span>
             </div>
 
             <div class="sede-card__details">
               <div class="sede-detail-row">
                 <span><i class="ri-time-line"></i> Lunes a Sábado:</span>
-                <span>8:30 am - 1:30 pm / 3:30 pm - 8:30 pm</span>
+                <span>8:30 am - 1:00 pm / 3:00 pm - 8:00 pm</span>
               </div>
               <div class="sede-detail-row">
                 <span><i class="ri-calendar-line"></i> Domingo:</span>
@@ -697,11 +757,11 @@
             </div>
 
             <div class="sede-card__actions">
-              <a href="https://maps.google.com/?q=Jr.+Prolongacion+Bolivar+191,+Huanuco" target="_blank" class="btn btn--outline btn--sm">
-                <i class="ri-compass-3-line"></i> Cómo Llegar (Maps)
+              <a href="sedes.html" class="btn btn--outline btn--sm">
+                <i class="ri-map-pin-line"></i> Ver Foto & Mapa
               </a>
-              <a href="https://wa.me/51942538705?text=Hola%20Xclusive%20Dent,%20deseo%20agendar%20cita%20en%20Sede%20Bolívar" target="_blank" class="btn btn--whatsapp btn--sm">
-                <i class="ri-whatsapp-line"></i> WhatsApp Sede Bolívar
+              <a href="https://wa.me/51942538705?text=Hola%20Xclusive%20Dent,%20deseo%20agendar%20cita%20en%20Sede%20Bolívar" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--sm">
+                <i class="ri-whatsapp-line"></i> WhatsApp Bolívar
               </a>
             </div>
           </div>
@@ -710,7 +770,7 @@
         <!-- Sede Amarilis -->
         <article class="sede-card">
           <div class="sede-card__image-wrap">
-            <img src="assets/images/sede_amarilis.jpg" alt="Instalaciones Sede Amarilis Xclusive Dent Huánuco" class="sede-card__img">
+            <img src="assets/images/sedes/sede_amarilis_real.png" alt="Instalaciones y Fachada Sede Amarilis Xclusive Dent Huánuco" class="sede-card__img" loading="lazy">
             <div class="sede-card__status" id="statusAmarilis">
               <span class="status-indicator"></span> Calculando horario...
             </div>
@@ -720,13 +780,13 @@
             <h3 class="sede-card__title">Sede Amarilis</h3>
             <div class="sede-card__address">
               <i class="ri-map-pin-2-fill"></i>
-              <span>Óvalo Esteban Pavletich (Frente al ISTAP), Amarilis, Huánuco.</span>
+              <span>Av. Esteban Pavletich 204 (Óvalo Esteban Pavletich, frente al ISTAP).</span>
             </div>
 
             <div class="sede-card__details">
               <div class="sede-detail-row">
                 <span><i class="ri-time-line"></i> Lunes a Sábado:</span>
-                <span>3:30 pm - 8:30 pm</span>
+                <span>9:00 am - 1:00 pm / 3:30 pm - 8:00 pm</span>
               </div>
               <div class="sede-detail-row">
                 <span><i class="ri-calendar-line"></i> Domingo:</span>
@@ -739,32 +799,35 @@
             </div>
 
             <div class="sede-card__actions">
-              <a href="https://maps.google.com/?q=Ovalo+Esteban+Pavletich+Amarilis+Huanuco" target="_blank" class="btn btn--outline btn--sm">
-                <i class="ri-compass-3-line"></i> Cómo Llegar (Maps)
+              <a href="sedes.html" class="btn btn--outline btn--sm">
+                <i class="ri-map-pin-line"></i> Ver Foto & Mapa
               </a>
-              <a href="https://wa.me/51926252914?text=Hola%20Xclusive%20Dent,%20deseo%20agendar%20cita%20en%20Sede%20Amarilis" target="_blank" class="btn btn--whatsapp btn--sm">
-                <i class="ri-whatsapp-line"></i> WhatsApp Sede Amarilis
+              <a href="https://wa.me/51926252914?text=Hola%20Xclusive%20Dent,%20deseo%20agendar%20cita%20en%20Sede%20Amarilis" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--sm">
+                <i class="ri-whatsapp-line"></i> WhatsApp Amarilis
               </a>
             </div>
           </div>
         </article>
       </div>
+
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="sedes.html" class="btn btn--primary btn--lg">
+          <i class="ri-map-pin-2-fill"></i> Conoce Más de Nuestras Sedes y Mapas
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- ==========================================================================
-       MEDICAL TEAM & AUTHORITY (ESPECIALISTAS PERÚ - BRASIL)
-       ========================================================================== -->
   <!-- ==========================================================================
        MEDICAL TEAM & AUTHORITY (STAFF REAL DE ESPECIALISTAS)
        ========================================================================== -->
   <section id="especialistas" class="section section--alt">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Nuestros Profesionales</span>
-        <h2 class="section-title">Conoce al Equipo de Especialistas de Xclusive Dent</h2>
+      <div class="section-header text-center" style="max-width: 680px; margin: 0 auto 3rem;">
+        <span class="section-tag"><i class="ri-user-star-line"></i> Especialista</span>
+        <h2 class="section-title">Nuestros Profesionales</h2>
         <p class="section-desc">
-          Cirujanos dentistas colegiados y especialistas con formación de posgrado en Perú y Brasil, comprometidos con la salud y estética de tu sonrisa.
+          Atención y diagnóstico especializado con los más altos estándares odontológicos de Perú y Brasil.
         </p>
       </div>
 
@@ -773,9 +836,6 @@
         <article class="doctor-card">
           <div class="doctor-card__photo-wrap">
             <img src="assets/images/doctors/doctor_ronald_alvarez.jpg" alt="Dr. Ronald Álvarez Albornoz" class="doctor-card__photo">
-            <div class="doctor-card__badge-country">
-              <span>🇵🇪 Perú</span> & <span>🇧🇷 Brasil</span> • Especialista
-            </div>
           </div>
           <div class="doctor-card__body">
             <h3 class="doctor-card__name">Dr. Ronald Álvarez Albornoz</h3>
@@ -783,15 +843,7 @@
               Especialista en Ortodoncia y Ortopedia Maxilar (RNE 06086)<br>
               Especialista en Implantología Oral Integral (RNE 05794)
             </div>
-            <div>
-              <span class="doctor-card__cop">C.O.P. 33104</span>
-            </div>
-            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1.25rem; flex-grow: 1;">
-              Especialista con formación internacional en Brasil. Líder en sistemas avanzados de ortodoncia de autoligado, ortopedia y rehabilitación sobre implantes en Huánuco.
-            </p>
-            <button onclick="openModal('appointmentModal')" class="btn btn--outline btn--sm" style="width: 100%;">
-              <i class="ri-calendar-check-line"></i> Agendar con Dr. Ronald
-            </button>
+            <span class="doctor-card__cop">C.O.P. 33104</span>
           </div>
         </article>
 
@@ -799,24 +851,13 @@
         <article class="doctor-card">
           <div class="doctor-card__photo-wrap">
             <img src="assets/images/doctors/doctor_kenyi_gonzales.jpeg" alt="Dr. Kenyi Gonzales Takano" class="doctor-card__photo">
-            <div class="doctor-card__badge-country">
-              <span>🇵🇪 Cirugía Maxilofacial</span>
-            </div>
           </div>
           <div class="doctor-card__body">
             <h3 class="doctor-card__name">Dr. Kenyi Gonzales Takano</h3>
             <div class="doctor-card__spec">
               Especialista en Cirugía Bucal y Maxilofacial (RNE 6074)
             </div>
-            <div>
-              <span class="doctor-card__cop">C.O.P. 41288</span>
-            </div>
-            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1.25rem; flex-grow: 1;">
-              Experto en extracciones complejas de muelas del juicio, cirugía oral reconstructiva y procedimientos de alta complejidad con mínima invasión y rápida recuperación.
-            </p>
-            <button onclick="openModal('appointmentModal')" class="btn btn--outline btn--sm" style="width: 100%;">
-              <i class="ri-calendar-check-line"></i> Agendar con Dr. Kenyi
-            </button>
+            <span class="doctor-card__cop">C.O.P. 41288</span>
           </div>
         </article>
 
@@ -824,24 +865,13 @@
         <article class="doctor-card">
           <div class="doctor-card__photo-wrap">
             <img src="assets/images/doctors/doctora_ilusion_ortiz.jpg" alt="Dra. Ilusión Ortiz" class="doctor-card__photo">
-            <div class="doctor-card__badge-country">
-              <span>🇵🇪 Estética Dental</span>
-            </div>
           </div>
           <div class="doctor-card__body">
             <h3 class="doctor-card__name">Dra. Ilusión Ortiz</h3>
             <div class="doctor-card__spec">
               Cirujano Dentista
             </div>
-            <div>
-              <span class="doctor-card__cop">C.O.P. 45896</span>
-            </div>
-            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1.25rem; flex-grow: 1;">
-              Especializada en armonización de sonrisa, diseño de carillas de resina, profilaxis profunda y tratamientos odontológicos con especial cuidado estético.
-            </p>
-            <button onclick="openModal('appointmentModal')" class="btn btn--outline btn--sm" style="width: 100%;">
-              <i class="ri-calendar-check-line"></i> Agendar con Dra. Ilusión
-            </button>
+            <span class="doctor-card__cop">C.O.P. 45896</span>
           </div>
         </article>
 
@@ -849,24 +879,13 @@
         <article class="doctor-card">
           <div class="doctor-card__photo-wrap">
             <img src="assets/images/doctors/doctora_rocio_alvarez.jpg" alt="Dra. Rocío Álvarez" class="doctor-card__photo">
-            <div class="doctor-card__badge-country">
-              <span>🇵🇪 Rehabilitación Oral</span>
-            </div>
           </div>
           <div class="doctor-card__body">
             <h3 class="doctor-card__name">Dra. Rocío Álvarez</h3>
             <div class="doctor-card__spec">
               Cirujano Dentista
             </div>
-            <div>
-              <span class="doctor-card__cop">C.O.P. 42465</span>
-            </div>
-            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1.25rem; flex-grow: 1;">
-              Enfocada en el diagnóstico temprano, restauración funcional de piezas con caries y planes de prevención dental integral para toda la familia.
-            </p>
-            <button onclick="openModal('appointmentModal')" class="btn btn--outline btn--sm" style="width: 100%;">
-              <i class="ri-calendar-check-line"></i> Agendar con Dra. Rocío
-            </button>
+            <span class="doctor-card__cop">C.O.P. 42465</span>
           </div>
         </article>
 
@@ -874,24 +893,13 @@
         <article class="doctor-card">
           <div class="doctor-card__photo-wrap">
             <img src="assets/images/doctors/doctora_rosemaria_mallqui.jpg" alt="Dra. Rosemaria Mallqui" class="doctor-card__photo">
-            <div class="doctor-card__badge-country">
-              <span>🇵🇪 Odontopediatría</span>
-            </div>
           </div>
           <div class="doctor-card__body">
             <h3 class="doctor-card__name">Dra. Rosemaria Mallqui</h3>
             <div class="doctor-card__spec">
               Cirujano Dentista
             </div>
-            <div>
-              <span class="doctor-card__cop">C.O.P. 54696</span>
-            </div>
-            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1.25rem; flex-grow: 1;">
-              Atención cercana y amigable para niños y jóvenes. Especialista en crear experiencias odontológicas sin temor y cuidar la dentición infantil en desarrollo.
-            </p>
-            <button onclick="openModal('appointmentModal')" class="btn btn--outline btn--sm" style="width: 100%;">
-              <i class="ri-calendar-check-line"></i> Agendar con Dra. Rosemaria
-            </button>
+            <span class="doctor-card__cop">C.O.P. 54696</span>
           </div>
         </article>
       </div>
@@ -979,6 +987,13 @@
           </div>
         </div>
       </div>
+
+      <!-- Ver todos los testimonios CTA -->
+      <div class="text-center" style="margin-top: 2.5rem;">
+        <a href="testimonios.html" class="btn btn--outline" style="display: inline-flex; align-items: center; gap: 0.6rem; font-weight: 600;">
+          <i class="ri-video-line" style="font-size: 1.15rem; color: var(--color-primary-gold);"></i> Ver Más Testimonios <i class="ri-arrow-right-line"></i>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -1052,61 +1067,89 @@
   </section>
 
   <!-- ==========================================================================
+       CLOSING HIGH-IMPACT CTA BANNER
+       ========================================================================== -->
+  <section class="section" style="background: var(--gradient-primary); text-align: center; color: #ffffff; padding: 3.5rem 1.25rem;">
+    <div class="container" style="max-width: 680px; margin: 0 auto;">
+      <span class="section-tag" style="background: rgba(0, 212, 250, 0.15); color: var(--accent-cyan); border: 1px solid rgba(0, 212, 250, 0.3); margin-bottom: 0.85rem; display: inline-flex;">
+        <i class="ri-calendar-check-line"></i> Tu Sonrisa Empieza Hoy
+      </span>
+      <h2 style="font-family: var(--font-heading); color: #ffffff; font-size: 2rem; font-weight: 800; margin-bottom: 0.75rem; line-height: 1.25;">
+        ¿Listo Para Transformar Tu Sonrisa?
+      </h2>
+      <p style="color: #e2e8f0; font-size: 0.95rem; line-height: 1.5; margin-bottom: 1.5rem; max-width: 520px; margin-left: auto; margin-right: auto;">
+        Agenda tu consulta en Sede Bolívar o Sede Amarilis. Diagnóstico digital, atención sin dolor y facilidades de pago.
+      </p>
+      <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+        <button onclick="openModal('appointmentModal')" class="btn btn--primary" style="box-shadow: 0 8px 24px rgba(0, 212, 250, 0.35);">
+          <i class="ri-calendar-check-line"></i> Solicitar Cita
+        </button>
+        <a href="https://wa.me/51942538705?text=Hola%20Xclusive%20Dent,%20deseo%20agendar%20una%20cita%20de%20evaluación" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp">
+          <i class="ri-whatsapp-line"></i> WhatsApp Directo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+    <!-- ==========================================================================
        FOOTER
        ========================================================================== -->
   <footer class="footer">
     <div class="container footer__grid">
-      <!-- Col 1: About & Logo -->
+      <!-- Col 1: Marca & Redes -->
       <div>
         <img src="assets/images/logo.png" alt="Xclusive Dent Huánuco" class="footer__brand-logo">
         <p class="footer__about">
-          Clínica dental líder en Huánuco, especializada en ortodoncia, implantología y estética dental con respaldo académico de Perú y Brasil. Categorizada por SUSALUD para tu total seguridad.
+          Clínica odontológica líder en Huánuco, especializada en ortodoncia, implantología y estética dental con respaldo académico de Perú y Brasil. Categorizada por SUSALUD.
         </p>
         <div class="footer__socials">
-          <a href="https://www.facebook.com/xclusivedent" target="_blank" class="footer__social-link" aria-label="Facebook">
+          <a href="https://www.facebook.com/xclusivedent" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Facebook">
             <i class="ri-facebook-fill"></i>
           </a>
-          <a href="https://www.instagram.com/xclusivedent_huanuco/" target="_blank" class="footer__social-link" aria-label="Instagram">
+          <a href="https://www.instagram.com/xclusivedent_huanuco/" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Instagram">
             <i class="ri-instagram-line"></i>
           </a>
-          <a href="https://www.tiktok.com/@xclusivedent_huanuco" target="_blank" class="footer__social-link" aria-label="TikTok">
+          <a href="https://www.tiktok.com/@xclusivedent_huanuco" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="TikTok">
             <i class="ri-tiktok-line"></i>
           </a>
-          <a href="https://wa.me/51942538705" target="_blank" class="footer__social-link" aria-label="WhatsApp">
+          <a href="https://wa.me/51942538705" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="WhatsApp">
             <i class="ri-whatsapp-line"></i>
           </a>
         </div>
       </div>
 
-      <!-- Col 2: Navigation -->
+      <!-- Col 2: Navegación -->
       <div>
         <h4 class="footer__title">Navegación</h4>
         <ul class="footer__links">
-          <li><a href="#inicio" class="footer__link"><i class="ri-arrow-right-s-line"></i> Inicio</a></li>
-          <li><a href="#antes-despues" class="footer__link"><i class="ri-arrow-right-s-line"></i> Casos Antes y Después</a></li>
-          <li><a href="#tratamientos" class="footer__link"><i class="ri-arrow-right-s-line"></i> Especialidades</a></li>
-          <li><a href="#test-sonrisa" class="footer__link"><i class="ri-arrow-right-s-line"></i> Test de Sonrisa</a></li>
-          <li><a href="#sedes" class="footer__link"><i class="ri-arrow-right-s-line"></i> Sedes y Horarios</a></li>
-          <li><a href="#especialistas" class="footer__link"><i class="ri-arrow-right-s-line"></i> Doctores</a></li>
+          <li><a href="index.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Inicio</a></li>
+          <li><a href="nosotros.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Conócenos</a></li>
+          <li><a href="tratamientos.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Tratamientos</a></li>
+          <li><a href="especialistas.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Especialistas</a></li>
+          <li><a href="sedes.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Sedes</a></li>
+          <li><a href="testimonios.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Testimonios</a></li>
         </ul>
       </div>
 
-      <!-- Col 3: Services -->
+      <!-- Col 3: Especialidades -->
       <div>
         <h4 class="footer__title">Especialidades</h4>
         <ul class="footer__links">
-          <li><a href="#tratamientos" class="footer__link"><i class="ri-arrow-right-s-line"></i> Ortodoncia con Brackets</a></li>
-          <li><a href="#tratamientos" class="footer__link"><i class="ri-arrow-right-s-line"></i> Alineadores Invisibles</a></li>
-          <li><a href="#tratamientos" class="footer__link"><i class="ri-arrow-right-s-line"></i> Implantes Dentales</a></li>
-          <li><a href="#tratamientos" class="footer__link"><i class="ri-arrow-right-s-line"></i> Blanqueamiento Dental</a></li>
-          <li><a href="#tratamientos" class="footer__link"><i class="ri-arrow-right-s-line"></i> Cirugía de Terceras Molares</a></li>
-          <li><a href="#tratamientos" class="footer__link"><i class="ri-arrow-right-s-line"></i> Profilaxis y Curaciones</a></li>
+          <li><a href="tratamientos/ortodoncia.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Ortodoncia y Brackets</a></li>
+          <li><a href="tratamientos/implantologia.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Implantes Dentales</a></li>
+          <li><a href="tratamientos/estetica-dental.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Diseño de Sonrisa</a></li>
+          <li><a href="tratamientos/protesis.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Prótesis Dentales</a></li>
+          <li><a href="tratamientos/endodoncia.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Endodoncia Digital</a></li>
+          <li><a href="tratamientos/terceros-molares.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Terceros Molares</a></li>
         </ul>
       </div>
 
-      <!-- Col 4: Sedes & Contact -->
+      <!-- Col 4: Sedes & Contacto -->
       <div>
-        <h4 class="footer__title">Contacto Directo</h4>
+        <h4 class="footer__title">Sedes & Contacto</h4>
         <div class="footer__contact-item">
           <i class="ri-map-pin-line"></i>
           <div>
@@ -1119,26 +1162,24 @@
           <i class="ri-map-pin-line"></i>
           <div>
             <strong>Sede Amarilis:</strong><br>
-            Óvalo Esteban Pavletich (Frente al ISTAP)<br>
+            Av. Esteban Pavletich 204 (Óvalo)<br>
             <a href="tel:+51926252914" style="color: var(--accent-cyan);">📞 926 252 914</a>
           </div>
         </div>
         <div class="footer__contact-item">
           <i class="ri-mail-line"></i>
-          <div>
-            contacto@xclusivedent.com
-          </div>
+          <div>contacto@xclusivedent.com</div>
         </div>
       </div>
     </div>
 
     <div class="container footer__bottom">
       <div>
-        &copy; 2026 <strong>Xclusive Dent</strong> - Huánuco, Perú. Todos los derechos reservados.
+        &copy; 2026 <strong>Clínica Dental Xclusive Dent</strong>. Todos los derechos reservados.
       </div>
-      <div style="display: flex; gap: 1.5rem; align-items: center;">
-        <a href="#inicio" style="color: #94a3b8;">Libro de Reclamaciones</a>
-        <a href="#inicio" style="color: #94a3b8;">Política de Privacidad</a>
+      <div class="footer__legal-links">
+        <a href="libro-de-reclamaciones.html" style="color: #94a3b8;">Libro de Reclamaciones</a>
+        <a href="privacidad.html" style="color: #94a3b8;">Política de Privacidad</a>
       </div>
     </div>
   </footer>

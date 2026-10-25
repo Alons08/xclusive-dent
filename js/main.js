@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initServicesFilter();
   initFaqAccordion();
   initStatCounters();
+  initTreatmentsToggle();
 });
 
 /* ==========================================================================
@@ -412,3 +413,65 @@ window.addEventListener('click', (e) => {
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeModal();
 });
+
+window.handleContactPageBooking = function(e) {
+  e.preventDefault();
+  const name = document.getElementById('contact_name')?.value || '';
+  const phone = document.getElementById('contact_phone')?.value || '';
+  const branch = document.getElementById('contact_branch')?.value || 'Sede Bolívar';
+  const service = document.getElementById('contact_service')?.value || 'Evaluación General';
+  const notes = document.getElementById('contact_notes')?.value || '';
+
+  const targetPhone = branch.includes('Amarilis') ? '51926252914' : '51942538705';
+
+  const message = `👋 ¡Hola Xclusive Dent! Deseo agendar una cita.%0A%0A` +
+    `👤 *Nombre:* ${encodeURIComponent(name)}%0A` +
+    `📱 *Teléfono:* ${encodeURIComponent(phone)}%0A` +
+    `📍 *Sede:* ${encodeURIComponent(branch)}%0A` +
+    `🦷 *Tratamiento:* ${encodeURIComponent(service)}%0A` +
+    (notes ? `📝 *Consulta adicional:* ${encodeURIComponent(notes)}%0A%0A` : `%0A`) +
+    `¿Tienen disponibilidad para esta semana? Muchas gracias.`;
+
+  window.open(`https://wa.me/${targetPhone}?text=${message}`, '_blank');
+};
+
+/* ==========================================================================
+   TREATMENTS TOGGLE (VER MÁS / VER MENOS)
+   ========================================================================== */
+function initTreatmentsToggle() {
+  const btnToggle = document.getElementById('btnToggleTreatments');
+  const btnText = document.getElementById('btnToggleTreatmentsText');
+  const btnIcon = document.getElementById('btnToggleTreatmentsIcon');
+  const extraCards = document.querySelectorAll('.service-card--extra');
+
+  if (!btnToggle || extraCards.length === 0) return;
+
+  btnToggle.addEventListener('click', () => {
+    const isExpanded = btnToggle.getAttribute('aria-expanded') === 'true';
+
+    extraCards.forEach(card => {
+      if (!isExpanded) {
+        card.classList.add('is-visible');
+      } else {
+        card.classList.remove('is-visible');
+      }
+    });
+
+    if (!isExpanded) {
+      btnToggle.setAttribute('aria-expanded', 'true');
+      if (btnText) btnText.textContent = 'Ver Menos';
+      if (btnIcon) btnIcon.className = 'ri-arrow-up-s-line';
+    } else {
+      btnToggle.setAttribute('aria-expanded', 'false');
+      if (btnText) btnText.textContent = 'Ver Más Tratamientos';
+      if (btnIcon) btnIcon.className = 'ri-arrow-down-s-line';
+
+      const treatmentsSection = document.getElementById('tratamientos');
+      if (treatmentsSection) {
+        treatmentsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  });
+}
+
+

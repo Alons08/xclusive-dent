@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" width="240" height="70">
+  <g transform="translate(15, 6)">
+    <!-- Ivoclar Dotted Crown Arc -->
+    <circle cx="50" cy="8" r="1.8" fill="#0284C7" />
+    <circle cx="58" cy="6" r="2.2" fill="#0284C7" />
+    <circle cx="68" cy="6" r="2.5" fill="#0284C7" />
+    <circle cx="78" cy="8" r="2.2" fill="#0284C7" />
+    <circle cx="86" cy="12" r="1.8" fill="#0284C7" />
+    <circle cx="92" cy="18" r="1.5" fill="#0284C7" />
+    <!-- Typography -->
+    <text x="5" y="32" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="20" letter-spacing="0.5" fill="#0369A1">ivoclar</text>
+    <text x="5" y="47" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="20" letter-spacing="0.5" fill="#0284C7">vivadent<tspan fill="#0284C7">:</tspan></text>
+    <text x="122" y="47" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="6.8" letter-spacing="0.2" fill="#64748B">passion vision innovation</text>
+  </g>
+</svg>

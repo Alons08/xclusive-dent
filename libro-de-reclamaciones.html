@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Libro de Reclamaciones Virtual | Clínica Dental Xclusive Dent Huánuco</title>
+  <meta name="title" content="Libro de Reclamaciones Virtual | Clínica Dental Xclusive Dent Huánuco">
+  <meta name="description" content="Libro de Reclamaciones Virtual de Clínica Dental Xclusive Dent en Huánuco, conforme a las directivas de INDECOPI y la Ley N° 29571.">
+  <meta name="theme-color" content="#071524">
+  
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+    <div class="topbar">
+    <div class="container topbar__content">
+      <div class="topbar__left">
+        <span class="topbar__badge">
+          <span class="pulse-dot"></span> Sedes Huánuco & Amarilis
+        </span>
+        <span class="topbar__item">
+          <i class="ri-medal-line"></i> Clínica Categorizada por <strong>SUSALUD</strong>
+        </span>
+      </div>
+      <div class="topbar__right">
+        <a href="tel:+51942538705" class="topbar__item topbar__link">
+          <i class="ri-phone-line"></i> Sede Bolívar: 942 538 705
+        </a>
+        <a href="tel:+51926252914" class="topbar__item topbar__link">
+          <i class="ri-phone-line"></i> Sede Amarilis: 926 252 914
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header & Navbar -->
+  <header class="navbar">
+    <div class="container nav__content">
+      <a href="index.html" class="nav__brand" aria-label="Xclusive Dent Inicio">
+        <img src="assets/images/logo.png" alt="Xclusive Dent Huánuco" class="nav__logo-img">
+      </a>
+      <nav>
+        <ul class="nav__menu">
+          <li><a href="index.html" class="nav__link">Inicio</a></li>
+          <li><a href="nosotros.html" class="nav__link">Conócenos</a></li>
+          <li><a href="tratamientos.html" class="nav__link">Tratamientos</a></li>
+          <li><a href="especialistas.html" class="nav__link">Especialistas</a></li>
+          <li><a href="sedes.html" class="nav__link">Sedes</a></li>
+          <li><a href="testimonios.html" class="nav__link">Testimonios</a></li>
+        </ul>
+      </nav>
+      <div class="nav__actions">
+        <a href="contacto.html" class="btn btn--primary nav__btn-desktop"><i class="ri-calendar-check-line"></i> Agendar Cita</a>
+        <button class="nav__toggle" aria-label="Abrir Menú" aria-expanded="false"><i class="ri-menu-4-line"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html"><i class="ri-home-4-line"></i> Inicio</a>
+        <span class="breadcrumb-separator"><i class="ri-arrow-right-s-line"></i></span>
+        <span>Libro de Reclamaciones</span>
+      </div>
+      <span class="page-hero__badge"><i class="ri-book-open-line"></i> Conforme a Normativa INDECOPI</span>
+      <h1 class="page-hero__title">Libro de Reclamaciones Virtual</h1>
+      <p class="page-hero__subtitle">
+        Conforme a lo establecido en el Código de Protección y Defensa del Consumidor (Ley N° 29571), ponemos a tu disposición nuestro Libro de Reclamaciones Virtual.
+      </p>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section class="section">
+    <div class="container">
+      <div class="legal-wrapper" style="max-width: 780px;">
+        <div style="background: var(--bg-card-alt); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 2rem; border-left: 4px solid var(--accent-cyan); font-size: 0.9rem; color: #475569;">
+          <strong>Información al Consumidor:</strong><br>
+          • <strong>Queja:</strong> Malestar o descontento respecto a la atención al público.<br>
+          • <strong>Reclamo:</strong> Disconformidad relacionada con los servicios prestados o tratamientos recibidos.
+        </div>
+
+        <form id="complaintsForm" onsubmit="handleClaimSubmit(event)">
+          <h3 style="font-family: var(--font-heading); color: var(--primary-navy); margin-bottom: 1.25rem; font-size: 1.25rem;">1. Identificación del Consumidor Reclamante</h3>
+          
+          <div class="claim-form-grid">
+            <div class="form-group">
+              <label class="form-label">Nombres y Apellidos</label>
+              <input type="text" class="form-input" id="claimNombre" placeholder="Tu nombre completo" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">DNI / Carnet de Extranjería</label>
+              <input type="text" class="form-input" id="claimDni" placeholder="Número de documento" required>
+            </div>
+          </div>
+
+          <div class="claim-form-grid">
+            <div class="form-group">
+              <label class="form-label">Teléfono / WhatsApp</label>
+              <input type="tel" class="form-input" id="claimTelefono" placeholder="Ej: 942538705" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Correo Electrónico</label>
+              <input type="email" class="form-input" id="claimEmail" placeholder="tucorreo@ejemplo.com" required>
+            </div>
+          </div>
+
+          <h3 style="font-family: var(--font-heading); color: var(--primary-navy); margin-bottom: 1.25rem; font-size: 1.25rem;">2. Detalle de la Atención y Reclamación</h3>
+
+          <div class="claim-form-grid">
+            <div class="form-group">
+              <label class="form-label">Sede Donde se Atendió</label>
+              <select class="form-select" id="claimSede" required>
+                <option value="Sede Jr. Bolívar 191">Sede Jr. Bolívar 191, Huánuco</option>
+                <option value="Sede Amarilis Pavletich">Sede Amarilis (Óvalo Pavletich)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Tipo de Solicitud</label>
+              <select class="form-select" id="claimTipo" required>
+                <option value="Reclamo">Reclamo (Disconformidad con el servicio)</option>
+                <option value="Queja">Queja (Inconformidad con la atención)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label class="form-label">Detalle y Hechos que Motivan la Reclamación</label>
+            <textarea class="form-input" id="claimDetalle" rows="5" placeholder="Describe detalladamente los hechos ocurridos, fechas y personal interviniente..." required style="resize: vertical;"></textarea>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label class="form-label">Pedido Concreto del Consumidor</label>
+            <textarea class="form-input" id="claimPedido" rows="3" placeholder="Indica cuál es la solución o respuesta que solicitas..." required style="resize: vertical;"></textarea>
+          </div>
+
+          <div style="font-size: 0.82rem; color: #64748b; margin-bottom: 1.5rem; line-height: 1.5;">
+            * Al enviar este formulario, se generará una notificación formal a la administración de Xclusive Dent para dar respuesta en el plazo máximo estipulado por ley (15 días hábiles).
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--lg" style="width: 100%;">
+            <i class="ri-send-plane-fill"></i> Registrar Reclamación Virtual
+          </button>
+        </form>
+
+        <div id="claimSuccessMessage" style="display: none; background: #ecfdf5; border: 1px solid #10b981; border-radius: var(--radius-md); padding: 2rem; text-align: center; margin-top: 1.5rem;">
+          <div style="font-size: 2.5rem; color: #10b981; margin-bottom: 0.5rem;"><i class="ri-checkbox-circle-fill"></i></div>
+          <h4 style="font-family: var(--font-heading); color: #065f46; font-size: 1.3rem; margin-bottom: 0.5rem;">Reclamación Registrada con Éxito</h4>
+          <p style="color: #047857; font-size: 0.95rem;">
+            Tu solicitud ha sido remitida a la dirección administrativa de Clínica Dental Xclusive Dent. Nos pondremos en contacto dentro del plazo de ley.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <!-- Col 1: Marca & Redes -->
+      <div>
+        <img src="assets/images/logo.png" alt="Xclusive Dent Huánuco" class="footer__brand-logo">
+        <p class="footer__about">
+          Clínica odontológica líder en Huánuco, especializada en ortodoncia, implantología y estética dental con respaldo académico de Perú y Brasil. Categorizada por SUSALUD.
+        </p>
+        <div class="footer__socials">
+          <a href="https://www.facebook.com/xclusivedent" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Facebook">
+            <i class="ri-facebook-fill"></i>
+          </a>
+          <a href="https://www.instagram.com/xclusivedent_huanuco/" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Instagram">
+            <i class="ri-instagram-line"></i>
+          </a>
+          <a href="https://www.tiktok.com/@xclusivedent_huanuco" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="TikTok">
+            <i class="ri-tiktok-line"></i>
+          </a>
+          <a href="https://wa.me/51942538705" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="WhatsApp">
+            <i class="ri-whatsapp-line"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 2: Navegación -->
+      <div>
+        <h4 class="footer__title">Navegación</h4>
+        <ul class="footer__links">
+          <li><a href="index.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Inicio</a></li>
+          <li><a href="nosotros.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Conócenos</a></li>
+          <li><a href="tratamientos.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Tratamientos</a></li>
+          <li><a href="especialistas.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Especialistas</a></li>
+          <li><a href="sedes.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Sedes</a></li>
+          <li><a href="testimonios.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Testimonios</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Especialidades -->
+      <div>
+        <h4 class="footer__title">Especialidades</h4>
+        <ul class="footer__links">
+          <li><a href="tratamientos/ortodoncia.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Ortodoncia y Brackets</a></li>
+          <li><a href="tratamientos/implantologia.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Implantes Dentales</a></li>
+          <li><a href="tratamientos/estetica-dental.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Diseño de Sonrisa</a></li>
+          <li><a href="tratamientos/protesis.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Prótesis Dentales</a></li>
+          <li><a href="tratamientos/endodoncia.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Endodoncia Digital</a></li>
+          <li><a href="tratamientos/terceros-molares.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Terceros Molares</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Sedes & Contacto -->
+      <div>
+        <h4 class="footer__title">Sedes & Contacto</h4>
+        <div class="footer__contact-item">
+          <i class="ri-map-pin-line"></i>
+          <div>
+            <strong>Sede Bolívar:</strong><br>
+            Jr. Prolongación Bolívar 191, Huánuco<br>
+            <a href="tel:+51942538705" style="color: var(--accent-cyan);">📞 942 538 705</a>
+          </div>
+        </div>
+        <div class="footer__contact-item">
+          <i class="ri-map-pin-line"></i>
+          <div>
+            <strong>Sede Amarilis:</strong><br>
+            Av. Esteban Pavletich 204 (Óvalo)<br>
+            <a href="tel:+51926252914" style="color: var(--accent-cyan);">📞 926 252 914</a>
+          </div>
+        </div>
+        <div class="footer__contact-item">
+          <i class="ri-mail-line"></i>
+          <div>contacto@xclusivedent.com</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <div>
+        &copy; 2026 <strong>Clínica Dental Xclusive Dent</strong>. Todos los derechos reservados.
+      </div>
+      <div class="footer__legal-links">
+        <a href="libro-de-reclamaciones.html" style="color: #94a3b8;">Libro de Reclamaciones</a>
+        <a href="privacidad.html" style="color: #94a3b8;">Política de Privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function handleClaimSubmit(e) {
+      e.preventDefault();
+      document.getElementById('complaintsForm').style.display = 'none';
+      document.getElementById('claimSuccessMessage').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
