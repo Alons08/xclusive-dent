@@ -367,43 +367,84 @@ button {
   min-height: calc(100vh - 120px);
   display: flex;
   align-items: center;
-  background-color: var(--primary-dark);
+  background-color: #050e18;
   overflow: hidden;
   padding: 3.5rem 0 2.5rem;
   color: #ffffff;
 }
 
-.hero__video-container {
+/* Hero Ambient Background & Depth Architecture */
+.hero__bg-media {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   z-index: 1;
+  pointer-events: none;
+  background-image: 
+    radial-gradient(circle at 18% 28%, rgba(0, 212, 250, 0.16) 0%, transparent 45%),
+    radial-gradient(circle at 82% 45%, rgba(0, 212, 250, 0.18) 0%, rgba(16, 185, 129, 0.08) 35%, transparent 60%),
+    linear-gradient(135deg, rgba(5, 14, 25, 0.95) 0%, rgba(7, 21, 36, 0.91) 50%, rgba(8, 25, 42, 0.96) 100%),
+    url('../assets/images/sede_bolivar.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
 }
 
-.hero__video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.35;
-  filter: saturate(1.2) contrast(1.1);
-}
-
-.hero__overlay {
+/* Subtle digital precision grid (evoking digital 3D dental diagnostics) */
+.hero__bg-grid {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    rgba(7, 21, 36, 0.96) 0%,
-    rgba(7, 21, 36, 0.88) 55%,
-    rgba(7, 21, 36, 0.65) 100%
-  );
-  z-index: 2;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at 50% 50%, black 25%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 25%, transparent 75%);
+  pointer-events: none;
+}
+
+/* Subtle ambient floating glow orbs */
+.hero__bg-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  opacity: 0.65;
+}
+
+.hero__bg-glow--cyan {
+  width: 500px;
+  height: 500px;
+  background: rgba(0, 212, 250, 0.13);
+  top: -120px;
+  left: 2%;
+  animation: hero-orb-float 14s ease-in-out infinite alternate;
+}
+
+.hero__bg-glow--mint {
+  width: 440px;
+  height: 440px;
+  background: rgba(16, 185, 129, 0.1);
+  bottom: -80px;
+  right: 6%;
+  animation: hero-orb-float 18s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes hero-orb-float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(25px, -20px) scale(1.08);
+  }
+  100% {
+    transform: translate(-15px, 15px) scale(0.95);
+  }
 }
 
 .hero__grid {
