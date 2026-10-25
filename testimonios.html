@@ -83,12 +83,17 @@
   <section class="section" style="background: var(--bg-alt);">
     <div class="container">
 
-      <!-- Video Filter Tags -->
-      <div class="filter-btn-group">
-        <button class="filter-btn active" onclick="filterVideos('todos', this)"><i class="ri-apps-line"></i> Todos los Videos</button>
-        <button class="filter-btn" onclick="filterVideos('ortodoncia', this)"><i class="ri-tooth-line"></i> Ortodoncia & Brackets</button>
-        <button class="filter-btn" onclick="filterVideos('control', this)"><i class="ri-shield-check-line"></i> Controles a Largo Plazo</button>
-        <button class="filter-btn" onclick="filterVideos('adultos', this)"><i class="ri-user-smile-line"></i> Ortodoncia en Adultos</button>
+      <!-- Video Filter Tags with Horizontal Scroll Container -->
+      <div class="filter-scroll-wrapper" id="filterScrollWrapper">
+        <div class="filter-btn-group" id="filterBtnGroup" role="tablist" aria-label="Filtro de testimonios en video">
+          <button class="filter-btn active" role="tab" aria-selected="true" onclick="filterVideos('todos', this)"><i class="ri-apps-line"></i> Todos los Videos</button>
+          <button class="filter-btn" role="tab" aria-selected="false" onclick="filterVideos('ortodoncia', this)"><i class="ri-tooth-line"></i> Ortodoncia & Brackets</button>
+          <button class="filter-btn" role="tab" aria-selected="false" onclick="filterVideos('control', this)"><i class="ri-shield-check-line"></i> Controles a Largo Plazo</button>
+          <button class="filter-btn" role="tab" aria-selected="false" onclick="filterVideos('adultos', this)"><i class="ri-user-smile-line"></i> Ortodoncia en Adultos</button>
+        </div>
+        <button type="button" class="filter-scroll-hint" id="filterScrollHint" aria-label="Ver más filtros de video" title="Desliza para ver más filtros">
+          <i class="ri-arrow-right-s-line"></i>
+        </button>
       </div>
 
       <!-- Real Video Grid -->
@@ -190,9 +195,6 @@
         <button onclick="openModal('appointmentModal')" class="btn btn--primary prefooter-cta__btn-primary">
           <i class="ri-calendar-check-line"></i> Agendar Cita
         </button>
-        <a href="https://wa.me/51942538705?text=Hola%20Xclusive%20Dent,%20deseo%20agendar%20una%20cita%20de%20evaluación" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp">
-          <i class="ri-whatsapp-line"></i> WhatsApp Directo
-        </a>
       </div>
     </div>
   </section>
@@ -289,10 +291,10 @@
 
   <!-- Floating WhatsApp Quick Action -->
   <div class="floating-actions">
-    <a href="https://wa.me/51942538705?text=Hola%20Xclusive%20Dent,%20deseo%20hacer%20una%20consulta" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Escribir por WhatsApp">
+    <button type="button" onclick="openModal('whatsappBranchModal')" class="floating-whatsapp" aria-label="Elegir sede por WhatsApp">
       <i class="ri-whatsapp-line"></i>
-      <span class="floating-tooltip">¿Deseas una cita? ¡Escríbenos!</span>
-    </a>
+      <span class="floating-tooltip">Elegir sede por WhatsApp</span>
+    </button>
   </div>
 
   <!-- ==========================================================================
@@ -372,18 +374,77 @@
   <script src="js/main.js"></script>
   <script>
     function filterVideos(category, button) {
-      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+        btn.setAttribute('aria-selected', 'false');
+      });
+      if (button) {
+        button.classList.add('active');
+        button.setAttribute('aria-selected', 'true');
+        // Centrar suavemente el botón activo en celulares
+        if (typeof button.scrollIntoView === 'function') {
+          button.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+      }
 
       const cards = document.querySelectorAll('.video-testimonial-card');
       cards.forEach(card => {
-        if (category === 'todos' || card.getAttribute('data-category') === category) {
+        const isMatch = (category === 'todos' || card.getAttribute('data-category') === category);
+        if (isMatch) {
           card.style.display = 'flex';
         } else {
           card.style.display = 'none';
+          // Pausar video si estaba reproduciéndose para no dejar audio activo
+          const vid = card.querySelector('video');
+          if (vid && !vid.paused) {
+            vid.pause();
+          }
         }
       });
     }
+
+    // Inicializar indicador visual de scroll para los filtros
+    document.addEventListener('DOMContentLoaded', () => {
+      const group = document.getElementById('filterBtnGroup');
+      const wrapper = document.getElementById('filterScrollWrapper');
+      const hint = document.getElementById('filterScrollHint');
+      if (!group || !wrapper) return;
+
+      const updateScrollIndicators = () => {
+        const maxScroll = group.scrollWidth - group.clientWidth;
+        if (maxScroll <= 5) {
+          wrapper.classList.remove('scrolled-start');
+          wrapper.classList.add('scrolled-end');
+          return;
+        }
+
+        const current = group.scrollLeft;
+        if (current > 10) {
+          wrapper.classList.add('scrolled-start');
+        } else {
+          wrapper.classList.remove('scrolled-start');
+        }
+
+        if (current >= maxScroll - 12) {
+          wrapper.classList.add('scrolled-end');
+        } else {
+          wrapper.classList.remove('scrolled-end');
+        }
+      };
+
+      group.addEventListener('scroll', updateScrollIndicators, { passive: true });
+      window.addEventListener('resize', updateScrollIndicators);
+      
+      // Permitir hacer click en la flecha para avanzar scroll
+      if (hint) {
+        hint.addEventListener('click', () => {
+          group.scrollBy({ left: 160, behavior: 'smooth' });
+        });
+      }
+
+      updateScrollIndicators();
+      setTimeout(updateScrollIndicators, 150);
+    });
   </script>
 </body>
 </html>

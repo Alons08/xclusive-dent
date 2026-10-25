@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initStatCounters();
   initTreatmentsToggle();
+  initWhatsAppBranchModal();
 });
 
 /* ==========================================================================
@@ -389,7 +390,75 @@ function initStatCounters() {
 /* ==========================================================================
    MODAL UTILITIES (GLOBAL)
    ========================================================================== */
+function initWhatsAppBranchModal() {
+  if (document.getElementById('whatsappBranchModal')) return;
+
+  const modalHtml = `
+  <div class="modal" id="whatsappBranchModal" role="dialog" aria-modal="true" aria-labelledby="waModalTitle">
+    <div class="modal__content modal__content--branches">
+      <button class="modal__close" onclick="closeModal()" aria-label="Cerrar ventana">
+        <i class="ri-close-line"></i>
+      </button>
+
+      <div class="modal-header-compact text-center">
+        <span class="modal-badge modal-badge--whatsapp">
+          <i class="ri-whatsapp-line"></i> WhatsApp Directo
+        </span>
+        <h3 id="waModalTitle" class="modal-title">Elige tu Sede de Atención</h3>
+        <p class="modal-subtitle">¿A cuál de nuestras 2 sedes en Huánuco deseas escribir directamente?</p>
+      </div>
+
+      <div class="wa-branches-grid">
+        <!-- Sede 1: Bolívar (Centro de Huánuco) -->
+        <a href="https://wa.me/51942538705?text=Hola%20Xclusive%20Dent%20Sede%20Bol%C3%ADvar,%20deseo%20realizar%20una%20consulta" target="_blank" rel="noopener noreferrer" class="wa-branch-card">
+          <div class="wa-branch-card__header">
+            <span class="wa-branch-card__tag"><i class="ri-vip-crown-fill"></i> Sede Central</span>
+            <span class="wa-branch-card__status"><span class="status-indicator"></span> En Línea</span>
+          </div>
+          <h4 class="wa-branch-card__name">Sede Bolívar (Centro)</h4>
+          <p class="wa-branch-card__desc">
+            <i class="ri-map-pin-2-fill"></i> Jr. Prolongación Bolívar N.° 191 (2do piso Mapfre)
+          </p>
+          <div class="wa-branch-card__cta">
+            <span class="wa-branch-card__number">
+              <i class="ri-whatsapp-line"></i> 942 538 705
+            </span>
+            <span class="wa-branch-card__btn">
+              Escribir <i class="ri-arrow-right-line"></i>
+            </span>
+          </div>
+        </a>
+
+        <!-- Sede 2: Amarilis (Óvalo Pavletich) -->
+        <a href="https://wa.me/51926252914?text=Hola%20Xclusive%20Dent%20Sede%20Amarilis,%20deseo%20realizar%20una%20consulta" target="_blank" rel="noopener noreferrer" class="wa-branch-card">
+          <div class="wa-branch-card__header">
+            <span class="wa-branch-card__tag wa-branch-card__tag--amarilis"><i class="ri-building-line"></i> Sede Amarilis</span>
+            <span class="wa-branch-card__status"><span class="status-indicator"></span> En Línea</span>
+          </div>
+          <h4 class="wa-branch-card__name">Sede Amarilis (Óvalo)</h4>
+          <p class="wa-branch-card__desc">
+            <i class="ri-map-pin-2-fill"></i> Av. Esteban Pavletich N.° 204 (frente al ISTAP)
+          </p>
+          <div class="wa-branch-card__cta">
+            <span class="wa-branch-card__number">
+              <i class="ri-whatsapp-line"></i> 926 252 914
+            </span>
+            <span class="wa-branch-card__btn">
+              Escribir <i class="ri-arrow-right-line"></i>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>`;
+
+  document.body.insertAdjacentHTML('beforeend', modalHtml);
+}
+
 window.openModal = function(modalId = 'appointmentModal') {
+  if (modalId === 'whatsappBranchModal' && !document.getElementById('whatsappBranchModal')) {
+    initWhatsAppBranchModal();
+  }
   const modal = document.getElementById(modalId);
   if (modal) {
     modal.classList.add('active');
