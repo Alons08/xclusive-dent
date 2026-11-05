@@ -83,56 +83,80 @@ function initSmileSlider() {
    Sede Amarilis: Mon-Sat: 3:30pm - 8:30pm. Sun: Closed.
    ========================================================================== */
 function initSedesScheduleStatus() {
-  const bolivarStatusEl = document.getElementById('statusBolivar');
-  const amarilisStatusEl = document.getElementById('statusAmarilis');
+  const bolivarElements = document.querySelectorAll('#statusBolivar, .status-bolivar, [data-sede-status="bolivar"]');
+  const amarilisElements = document.querySelectorAll('#statusAmarilis, .status-amarilis, [data-sede-status="amarilis"]');
+
+  if (bolivarElements.length === 0 && amarilisElements.length === 0) return;
 
   function checkClinicStatus() {
-    // Current time in Peru (UTC-5)
-    const now = new Date();
-    const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
-    const peruTime = new Date(utc - (5 * 3600000));
-    
-    const day = peruTime.getDay(); // 0 is Sunday, 1-6 Mon-Sat
-    const hour = peruTime.getHours();
-    const minute = peruTime.getMinutes();
+    // Current official time in Peru (UTC-5 America/Lima)
+    const peruDate = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Lima' }));
+    const day = peruDate.getDay(); // 0 is Sunday, 1-6 Mon-Sat
+    const hour = peruDate.getHours();
+    const minute = peruDate.getMinutes();
     const currentTimeInMinutes = (hour * 60) + minute;
 
-    // Check Bolívar
+    // --- SEDE BOLÍVAR ---
+    // Turno Mañana: 8:30 am (510 min) - 1:30 pm (810 min)
+    // Turno Tarde:  3:30 pm (930 min) - 8:30 pm (1230 min)
+    // Domingo: Cerrado
     let bolivarOpen = false;
-    let amarilisOpen = false;
+    let bolivarNextText = 'Abre 8:30 AM';
 
     if (day >= 1 && day <= 6) {
-      // 8:30 am (510 min) to 1:30 pm (810 min) OR 3:30 pm (930 min) to 8:30 pm (1230 min)
       if ((currentTimeInMinutes >= 510 && currentTimeInMinutes < 810) || 
           (currentTimeInMinutes >= 930 && currentTimeInMinutes < 1230)) {
         bolivarOpen = true;
+      } else if (currentTimeInMinutes < 510) {
+        bolivarNextText = 'Abre 8:30 AM';
+      } else if (currentTimeInMinutes >= 810 && currentTimeInMinutes < 930) {
+        bolivarNextText = 'Abre 3:30 PM';
+      } else {
+        // Pasadas las 8:30 PM (de noche)
+        bolivarNextText = (day === 6) ? 'Abre Lun 8:30 AM' : 'Abre 8:30 AM';
       }
-      
-      // Amarilis: 3:30 pm (930 min) to 8:30 pm (1230 min)
+    } else {
+      // Domingo
+      bolivarNextText = 'Abre Lun 8:30 AM';
+    }
+
+    // --- SEDE AMARILIS ---
+    // Turno Tarde: 3:30 pm (930 min) - 8:30 pm (1230 min)
+    // Domingo: Cerrado
+    let amarilisOpen = false;
+    let amarilisNextText = 'Abre 3:30 PM';
+
+    if (day >= 1 && day <= 6) {
       if (currentTimeInMinutes >= 930 && currentTimeInMinutes < 1230) {
         amarilisOpen = true;
+      } else if (currentTimeInMinutes < 930) {
+        amarilisNextText = 'Abre 3:30 PM';
+      } else {
+        // Pasadas las 8:30 PM (de noche)
+        amarilisNextText = (day === 6) ? 'Abre Lun 3:30 PM' : 'Abre 3:30 PM';
       }
+    } else {
+      // Domingo
+      amarilisNextText = 'Abre Lun 3:30 PM';
     }
 
-    if (bolivarStatusEl) {
-      if (bolivarOpen) {
-        bolivarStatusEl.className = 'sede-card__status status--open';
-        bolivarStatusEl.innerHTML = '<span class="status-indicator"></span> Abierto Ahora • Atendiendo';
-      } else {
-        bolivarStatusEl.className = 'sede-card__status status--closed';
-        bolivarStatusEl.innerHTML = '<span class="status-indicator"></span> Cerrado • Abre 8:30 AM';
-      }
-    }
+    // Actualizar elementos Sede Bolívar (soporta index.html y sedes.html)
+    bolivarElements.forEach(el => {
+      el.classList.remove(bolivarOpen ? 'status--closed' : 'status--open');
+      el.classList.add(bolivarOpen ? 'status--open' : 'status--closed');
+      el.innerHTML = bolivarOpen
+        ? '<span class="status-indicator"></span> Abierto Ahora • Atendiendo'
+        : `<span class="status-indicator"></span> Cerrado • ${bolivarNextText}`;
+    });
 
-    if (amarilisStatusEl) {
-      if (amarilisOpen) {
-        amarilisStatusEl.className = 'sede-card__status status--open';
-        amarilisStatusEl.innerHTML = '<span class="status-indicator"></span> Abierto Ahora • Atendiendo';
-      } else {
-        amarilisStatusEl.className = 'sede-card__status status--closed';
-        amarilisStatusEl.innerHTML = '<span class="status-indicator"></span> Cerrado • Abre 3:30 PM';
-      }
-    }
+    // Actualizar elementos Sede Amarilis (soporta index.html y sedes.html)
+    amarilisElements.forEach(el => {
+      el.classList.remove(amarilisOpen ? 'status--closed' : 'status--open');
+      el.classList.add(amarilisOpen ? 'status--open' : 'status--closed');
+      el.innerHTML = amarilisOpen
+        ? '<span class="status-indicator"></span> Abierto Ahora • Atendiendo'
+        : `<span class="status-indicator"></span> Cerrado • ${amarilisNextText}`;
+    });
   }
 
   checkClinicStatus();
