@@ -178,23 +178,131 @@ function initAppointmentWizard() {
   forms.forEach(form => {
     if (!form) return;
 
+    const sedeSelect = form.querySelector('[name="sede"]');
+    const turnoSelect = form.querySelector('[name="turno"]');
+    const turnoHint = form.querySelector('.turno-hint');
+
+    function syncTurnoWithSede() {
+      if (!sedeSelect || !turnoSelect) return;
+      const selectedSede = sedeSelect.value;
+      const mananaOption = turnoSelect.querySelector('option[data-turno="manana"]');
+
+      if (selectedSede === 'amarilis') {
+        // Sede Amarilis: solo turno tarde (3:30 pm - 8:30 pm)
+        if (mananaOption) {
+          mananaOption.disabled = true;
+          mananaOption.hidden = true;
+        }
+        if (turnoSelect.value === 'manana') {
+          turnoSelect.value = 'tarde';
+        }
+        if (turnoHint) {
+          turnoHint.className = 'turno-hint turno-hint--warning';
+          turnoHint.innerHTML = '<i class="ri-information-line"></i> Sede Amarilis atiende únicamente en Turno Tarde (3:30 pm a 8:30 pm)';
+        }
+      } else if (selectedSede === 'bolivar') {
+        // Sede Bolívar: 2 turnos (mañana y tarde)
+        if (mananaOption) {
+          mananaOption.disabled = false;
+          mananaOption.hidden = false;
+        }
+        if (turnoHint) {
+          turnoHint.className = 'turno-hint turno-hint--success';
+          turnoHint.innerHTML = '<i class="ri-checkbox-circle-line"></i> Sede Bolívar atiende en Turno Mañana y Turno Tarde';
+        }
+      } else {
+        // Sin sede seleccionada aún
+        if (mananaOption) {
+          mananaOption.disabled = false;
+          mananaOption.hidden = false;
+        }
+        if (turnoHint) {
+          turnoHint.className = 'turno-hint';
+          turnoHint.innerHTML = '<i class="ri-information-line"></i> Elige tu sede para ver horarios disponibles';
+        }
+      }
+    }
+
+    if (sedeSelect) {
+      sedeSelect.addEventListener('change', syncTurnoWithSede);
+      syncTurnoWithSede();
+    }
+
+    if (turnoSelect) {
+      turnoSelect.addEventListener('change', () => {
+        if (sedeSelect && sedeSelect.value === 'amarilis' && turnoSelect.value === 'manana') {
+          turnoSelect.value = 'tarde';
+          syncTurnoWithSede();
+        }
+      });
+    }
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const sede = form.querySelector('[name="sede"]')?.value || 'bolivar';
-      const tratamiento = form.querySelector('[name="tratamiento"]')?.value || 'Evaluación General';
-      const fecha = form.querySelector('[name="fecha"]')?.value || 'Lo antes posible';
-      const nombre = form.querySelector('[name="nombre"]')?.value || 'Paciente interesado';
+      const sede = form.querySelector('[name="sede"]')?.value;
+      const turno = form.querySelector('[name="turno"]')?.value;
+      const tratamiento = form.querySelector('[name="tratamiento"]')?.value;
+      const fecha = form.querySelector('[name="fecha"]')?.value?.trim();
+      const nombre = form.querySelector('[name="nombre"]')?.value?.trim();
+
+      if (!sede) {
+        if (sedeSelect) sedeSelect.focus();
+        return;
+      }
+
+      if (turnoSelect && !turno) {
+        turnoSelect.focus();
+        return;
+      }
+
+      if (sede === 'amarilis' && turno === 'manana') {
+        alert('La Sede Amarilis atiende exclusivamente en Turno Tarde (3:30 pm a 8:30 pm). Por favor selecciona el Turno Tarde.');
+        if (turnoSelect) {
+          turnoSelect.value = 'tarde';
+          turnoSelect.focus();
+        }
+        syncTurnoWithSede();
+        return;
+      }
+
+      if (!tratamiento) {
+        const tratSelect = form.querySelector('[name="tratamiento"]');
+        if (tratSelect) tratSelect.focus();
+        return;
+      }
+
+      if (!nombre) {
+        const nomInput = form.querySelector('[name="nombre"]');
+        if (nomInput) nomInput.focus();
+        return;
+      }
+
+      if (!fecha) {
+        const fecInput = form.querySelector('[name="fecha"]');
+        if (fecInput) fecInput.focus();
+        return;
+      }
 
       const targetPhone = phoneNumbers[sede] || phoneNumbers.bolivar;
       const sedeName = sede === 'amarilis' ? 'Sede Amarilis (Óvalo Esteban Pavletich)' : 'Sede Bolívar (Jr. Bolívar 191)';
 
+      let turnoText = '';
+      if (turno === 'manana') {
+        turnoText = 'Turno Mañana (8:30 am - 1:30 pm)';
+      } else if (turno === 'tarde') {
+        turnoText = 'Turno Tarde (3:30 pm - 8:30 pm)';
+      } else if (turno) {
+        turnoText = turno;
+      }
+
       const message = `👋 ¡Hola Xclusive Dent! Deseo agendar una cita.%0A%0A` +
         `👤 *Nombre:* ${encodeURIComponent(nombre)}%0A` +
         `📍 *Sede de preferencia:* ${encodeURIComponent(sedeName)}%0A` +
+        (turnoText ? `⏰ *Turno preferido:* ${encodeURIComponent(turnoText)}%0A` : '') +
         `🦷 *Tratamiento / Consulta:* ${encodeURIComponent(tratamiento)}%0A` +
-        `🗓️ *Fecha / Horario sugerido:* ${encodeURIComponent(fecha)}%0A%0A` +
-        `¿Tienen disponibilidad para esta fecha? Muchas gracias.`;
+        `🗓️ *Día o fecha sugerida:* ${encodeURIComponent(fecha)}%0A%0A` +
+        `¿Tienen disponibilidad para esta cita? Muchas gracias.`;
 
       const whatsappUrl = `https://wa.me/${targetPhone}?text=${message}`;
       window.open(whatsappUrl, '_blank');

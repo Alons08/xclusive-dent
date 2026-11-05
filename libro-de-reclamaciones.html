@@ -281,6 +281,7 @@
           <div class="input-with-icon">
             <i class="ri-map-pin-2-line"></i>
             <select name="sede" class="form-control" required>
+              <option value="" disabled selected>Selecciona tu sede...</option>
               <option value="bolivar">📍 Sede Central Bolívar (Jr. Bolívar 191)</option>
               <option value="amarilis">📍 Sede Amarilis (Óvalo Pavletich)</option>
             </select>
@@ -288,10 +289,24 @@
         </div>
 
         <div class="form-group">
+          <label class="form-label">Turno de Preferencia:</label>
+          <div class="input-with-icon">
+            <i class="ri-time-line"></i>
+            <select name="turno" class="form-control" required>
+              <option value="" disabled selected>Selecciona el turno...</option>
+              <option value="manana" data-turno="manana">Turno Mañana (8:30 am - 1:30 pm)</option>
+              <option value="tarde" data-turno="tarde">Turno Tarde (3:30 pm - 8:30 pm)</option>
+            </select>
+          </div>
+          <small class="turno-hint"><i class="ri-information-line"></i> Elige tu sede para ver horarios disponibles</small>
+        </div>
+
+        <div class="form-group">
           <label class="form-label">Tratamiento Requerido:</label>
           <div class="input-with-icon">
             <i class="ri-stethoscope-line"></i>
             <select name="tratamiento" class="form-control" required>
+              <option value="" disabled selected>Selecciona el tratamiento...</option>
               <option value="Ortodoncia y Ortopedia Maxilar">Ortodoncia y Ortopedia Maxilar</option>
               <option value="Implantes Dentales">Implantes Dentales</option>
               <option value="Prótesis Dentales">Prótesis Dentales</option>
@@ -316,11 +331,11 @@
           </div>
         </div>
 
-        <div class="form-group">
-          <label class="form-label">Día u Horario Preferido:</label>
+        <div class="form-group form-group--full">
+          <label class="form-label">Día o Fecha Sugerida:</label>
           <div class="input-with-icon">
-            <i class="ri-time-line"></i>
-            <input type="text" name="fecha" class="form-control" placeholder="Ej. Mañana o Sábado por la tarde" required>
+            <i class="ri-calendar-event-line"></i>
+            <input type="text" name="fecha" class="form-control" placeholder="Ej. Este viernes, mañana o sábado..." required>
           </div>
         </div>
 
