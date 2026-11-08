@@ -322,8 +322,14 @@ button {
 
 .btn--outline:hover {
   background: var(--accent-cyan);
-  color: #ffffff;
+  color: var(--primary-dark, #071524) !important;
+  font-weight: 700;
+  border-color: var(--accent-cyan);
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 212, 250, 0.4);
+}
+.btn--outline:hover i {
+  color: var(--primary-dark, #071524) !important;
 }
 
 .btn--white {
@@ -455,6 +461,123 @@ button {
   grid-template-columns: 1.2fr 0.8fr;
   align-items: center;
   gap: 2.25rem;
+}
+
+/* ==========================================================================
+   HERO SUSALUD HIGHLIGHT ACCREDITATION BADGE
+   ========================================================================== */
+.hero-susalud-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.95rem;
+  background: rgba(13, 34, 56, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 212, 250, 0.4);
+  box-shadow: 0 4px 20px rgba(0, 212, 250, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  padding: 0.45rem 0.95rem 0.45rem 0.5rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.75rem;
+  max-width: 100%;
+  transition: var(--transition);
+}
+
+.hero-susalud-highlight:hover {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 6px 26px rgba(0, 212, 250, 0.24);
+  transform: translateY(-1px);
+}
+
+.hero-susalud-highlight__logo-box {
+  background: #ffffff;
+  padding: 0.25rem 0.55rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+
+.hero-susalud-highlight__logo {
+  height: 34px;
+  width: auto;
+  max-width: 110px;
+  object-fit: contain;
+  display: block;
+}
+
+.hero-susalud-highlight__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.15rem;
+}
+
+.hero-susalud-highlight__headline {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.92rem;
+  color: #ffffff;
+  line-height: 1.25;
+}
+
+.hero-susalud-highlight__headline strong {
+  color: var(--accent-cyan);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.hero-susalud-highlight__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 10px #10b981;
+  flex-shrink: 0;
+  animation: pulseGreen 2s infinite ease-in-out;
+}
+
+@keyframes pulseGreen {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 8px #10b981;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+    box-shadow: 0 0 14px #34d399;
+  }
+}
+
+.hero-susalud-highlight__sub {
+  font-size: 0.76rem;
+  color: #94a3b8;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@media (max-width: 540px) {
+  .hero-susalud-highlight {
+    gap: 0.7rem;
+    padding: 0.4rem 0.75rem 0.4rem 0.4rem;
+    width: 100%;
+  }
+
+  .hero-susalud-highlight__logo {
+    height: 30px;
+    max-width: 90px;
+  }
+
+  .hero-susalud-highlight__headline {
+    font-size: 0.82rem;
+  }
+
+  .hero-susalud-highlight__sub {
+    font-size: 0.7rem;
+  }
 }
 
 .hero__badge-group {
@@ -3706,7 +3829,7 @@ button {
   background: var(--bg-card-alt);
   padding: 1rem;
   border-radius: var(--radius-md);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.85rem;
 }
 
 .sidebar-doctor-assigned__photo {
@@ -3725,6 +3848,84 @@ button {
 
 .sidebar-doctor-assigned__role {
   font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   SIDEBAR DOCTOR CERTIFICATE PREVIEW (CLICK TO ENLARGE)
+   ========================================================================== */
+.sidebar-doctor-certificate {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-top: 0.85rem;
+  margin-bottom: 1.5rem !important;
+  border: 1px solid rgba(0, 212, 250, 0.35);
+  box-shadow: 0 4px 14px rgba(7, 21, 36, 0.06);
+  cursor: pointer;
+  background: #f8fafc;
+  transition: var(--transition);
+  position: relative;
+}
+
+.sidebar-doctor-certificate:hover,
+.sidebar-doctor-certificate:focus-visible {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 6px 20px rgba(0, 212, 250, 0.25);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.sidebar-doctor-certificate__img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.sidebar-doctor-certificate:hover .sidebar-doctor-certificate__img {
+  transform: scale(1.03);
+}
+
+/* Modal específico para Certificado Oficial */
+.modal__content--cert {
+  max-width: 520px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.modal-cert-viewer {
+  background: #f8fafc;
+  border-radius: var(--radius-md);
+  padding: 0.5rem;
+  border: 1px solid var(--border-light);
+  max-height: 68vh;
+  overflow-y: auto;
+  margin-bottom: 0.85rem;
+  scrollbar-width: thin;
+}
+
+.modal-cert-img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  display: block;
+  box-shadow: var(--shadow-sm);
+}
+
+.modal-cert-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
 }
 
@@ -4445,5 +4646,173 @@ button {
   .prefooter-cta__actions .btn {
     width: 100%;
     justify-content: center;
+  }
+}
+
+/* ==========================================================================
+   COI DENTAL STORE & CATALOG STYLING
+   ========================================================================== */
+.coi-trust-bar {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-light);
+  padding: 1.25rem 0;
+}
+
+.coi-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.coi-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.coi-trust-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: rgba(0, 212, 250, 0.1);
+  color: var(--accent-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+
+.coi-trust-item strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--primary-navy);
+  margin-bottom: 0.15rem;
+}
+
+.coi-trust-item p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.35;
+}
+
+.coi-product-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  padding: 1.4rem 1.35rem;
+  position: relative;
+}
+
+.coi-product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(0, 212, 250, 0.45);
+}
+
+.coi-product-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.coi-product-card__tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--accent-cyan);
+  background: rgba(0, 212, 250, 0.08);
+  padding: 0.22rem 0.65rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(0, 212, 250, 0.2);
+}
+
+.coi-product-card__num {
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--text-light);
+}
+
+.coi-product-card__title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.95rem;
+}
+
+.coi-product-card__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  background: var(--bg-body);
+  border: 1px solid var(--border-light);
+  color: var(--primary-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.coi-product-card:hover .coi-product-card__icon {
+  background: var(--primary-navy);
+  color: var(--accent-cyan);
+  border-color: var(--primary-navy);
+}
+
+.coi-product-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.coi-product-card__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  flex-grow: 1;
+}
+
+.coi-product-card__features li {
+  font-size: 0.86rem;
+  color: var(--text-dark);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  line-height: 1.38;
+}
+
+.coi-product-card__features li i {
+  color: #10B981;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+  margin-top: 0.12rem;
+}
+
+.coi-product-card__footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light);
+}
+
+@media (max-width: 991px) {
+  .coi-trust-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
   }
 }

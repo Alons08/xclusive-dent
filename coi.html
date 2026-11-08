@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tienda Dental COI — Productos Odontológicos Certificados | Xclusive Dent</title>
+  <meta name="title" content="Tienda Dental COI — Productos Odontológicos Certificados | Xclusive Dent">
+  <meta name="description" content="Tienda dental oficial COI (Cuidado Odontológico Integral). 15 líneas de productos odontológicos para prevención, cuidado y tratamiento. Asesoría en técnica de uso y recojo en sedes Bolívar y Amarilis.">
+  <meta name="theme-color" content="#071524">
+  
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=2.0">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="topbar">
+    <div class="container topbar__container">
+      <div class="topbar__left">
+        <span class="topbar__badge">
+          <span class="pulse-dot"></span> Sedes Huánuco & Amarilis
+        </span>
+      </div>
+      <div class="topbar__right">
+        <a href="tel:+51942538705" class="topbar__item topbar__link">
+          <i class="ri-phone-line"></i> Sede Bolívar: 942 538 705
+        </a>
+        <a href="tel:+51926252914" class="topbar__item topbar__link">
+          <i class="ri-phone-line"></i> Sede Amarilis: 926 252 914
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header & Navbar -->
+  <header class="navbar">
+    <div class="container nav__content">
+      <a href="index.html" class="nav__brand" aria-label="Xclusive Dent Inicio">
+        <img src="assets/images/logo.png" alt="Xclusive Dent Huánuco" class="nav__logo-img">
+      </a>
+
+      <nav>
+        <ul class="nav__menu">
+          <li><a href="index.html" class="nav__link">Inicio</a></li>
+          <li><a href="nosotros.html" class="nav__link">Conócenos</a></li>
+          <li><a href="tratamientos.html" class="nav__link">Tratamientos</a></li>
+          <li><a href="especialistas.html" class="nav__link">Especialistas</a></li>
+          <li><a href="sedes.html" class="nav__link">Sedes</a></li>
+          <li><a href="testimonios.html" class="nav__link">Testimonios</a></li>
+          <li><a href="coi.html" class="nav__link active">Tienda COI</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav__actions">
+        <button onclick="openModal('appointmentModal')" class="btn btn--primary nav__btn-desktop">
+          <i class="ri-calendar-check-line"></i> Agendar Cita
+        </button>
+        <button class="nav__toggle" aria-label="Abrir Menú" aria-expanded="false">
+          <i class="ri-menu-4-line"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero (Compact & Commercial) -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html"><i class="ri-home-4-line"></i> Inicio</a>
+        <span class="breadcrumb-separator"><i class="ri-arrow-right-s-line"></i></span>
+        <span>Tienda Dental COI</span>
+      </div>
+
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;">
+        <div style="max-width: 680px;">
+          <h1 class="page-hero__title" style="margin-bottom: 0.75rem;">Tienda Dental COI</h1>
+          <p class="page-hero__subtitle" style="margin-bottom: 0;">
+            Productos certificados para prevención, cuidado y tratamiento.
+          </p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 1rem; background: rgba(255, 255, 255, 0.06); padding: 0.75rem 1.25rem; border-radius: var(--radius-md); border: 1px solid rgba(0, 212, 250, 0.25);">
+          <div style="background: #ffffff; padding: 0.45rem 0.85rem; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);">
+            <img src="assets/images/logo_coi.png" alt="COI Logo" style="height: 46px; width: auto; max-width: 130px; object-fit: contain; display: block;">
+          </div>
+          <div>
+            <div style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Atención y Pedidos</div>
+            <a href="https://wa.me/51914761119?text=Hola%20COI,%20deseo%20consultar%20por%20sus%20productos%20odontol%C3%B3gicos" target="_blank" rel="noopener noreferrer" style="font-size: 1.15rem; font-weight: 800; color: #ffffff; text-decoration: none; display: flex; align-items: center; gap: 0.4rem;">
+              <i class="ri-whatsapp-fill" style="color: #25D366;"></i> 914 761 119
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Store Trust / Benefit Highlights Bar -->
+  <section class="coi-trust-bar">
+    <div class="container">
+      <div class="coi-trust-grid">
+        <div class="coi-trust-item">
+          <div class="coi-trust-icon"><i class="ri-user-star-line"></i></div>
+          <div>
+            <strong>Te enseñamos el uso correcto</strong>
+            <p>Asesoría clínica práctica al adquirir cualquier producto</p>
+          </div>
+        </div>
+        <div class="coi-trust-item">
+          <div class="coi-trust-icon"><i class="ri-map-pin-2-line"></i></div>
+          <div>
+            <strong>Disponible en nuestras 2 Sedes</strong>
+            <p>Recojo en Jr. Bolívar 780 y Av. Los Girasoles 207</p>
+          </div>
+        </div>
+        <div class="coi-trust-item">
+          <div class="coi-trust-icon"><i class="ri-truck-line"></i></div>
+          <div>
+            <strong>Envíos a Todo el Perú</strong>
+            <p>Envíos a nivel nacional y delivery coordinado</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catalog Section: Interactive Filters & Product Cards -->
+  <section class="section" id="catalogo">
+    <div class="container">
+      
+      <!-- Interactive Category Filter -->
+      <div style="display: flex; justify-content: center; margin-bottom: 2.5rem;">
+        <div class="filter-btn-group">
+          <button type="button" class="filter-btn active" data-filter="all">
+            <i class="ri-apps-2-line"></i> Todas las Líneas (15)
+          </button>
+          <button type="button" class="filter-btn" data-filter="orto-kids">
+            <i class="ri-parent-line"></i> Ortodoncia & Niños
+          </button>
+          <button type="button" class="filter-btn" data-filter="especial">
+            <i class="ri-shield-cross-line"></i> Cuidado Especializado
+          </button>
+          <button type="button" class="filter-btn" data-filter="higiene">
+            <i class="ri-brush-line"></i> Higiene & Cepillos
+          </button>
+          <button type="button" class="filter-btn" data-filter="packs">
+            <i class="ri-gift-line"></i> Packs & Kits
+          </button>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="treatments-catalog-grid">
+
+        <!-- Line 1: Línea Ortodoncia -->
+        <article class="coi-product-card" data-category="orto-kids">
+          <div class="coi-product-card__header">
+            <span class="coi-product-card__tag">Ortodoncia</span>
+            <span class="coi-product-card__num">#01</span>
+          </div>
+          <div class="coi-product-card__title-row">
+            <div class="coi-product-card__icon"><i class="ri-brackets-line"></i></div>
+            <h3 class="coi-product-card__title">Línea Ortodoncia</h3>
+          </div>
+          <ul class="coi-product-card__features">
+            <li><i class="ri-checkbox-circle-fill"></i> Pack Ortodoncia y Kids</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Cepillos con corte en V y ceras de alivio</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Enhebradores y técnica de uso incluida</li>
+          </ul>
+          <div class="coi-product-card__footer">
+            <a href="https://wa.me/51914761119?text=Hola%20COI,%20deseo%20pedir%20la%20L%C3%ADnea%20Ortodoncia%20(Pack%20y%20Kids)" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp" style="width: 100%; justify-content: center;">
+              <i class="ri-whatsapp-line"></i> Pedir por WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <!-- Line 2: Línea Infantil -->
+        <article class="coi-product-card" data-category="orto-kids">
+          <div class="coi-product-card__header">
+            <span class="coi-product-card__tag">Odontopediatría</span>
+            <span class="coi-product-card__num">#02</span>
+          </div>
+          <div class="coi-product-card__title-row">
+            <div class="coi-product-card__icon"><i class="ri-bear-smile-line"></i></div>
+            <h3 class="coi-product-card__title">Línea Infantil</h3>
+          </div>
+          <ul class="coi-product-card__features">
+            <li><i class="ri-checkbox-circle-fill"></i> Baby (primeros dientitos y lactantes)</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Kids (desde los 2 años)</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Junior (mayores de 6 años) con flúor óptimo</li>
+          </ul>
+          <div class="coi-product-card__footer">
+            <a href="https://wa.me/51914761119?text=Hola%20COI,%20deseo%20pedir%20la%20L%C3%ADnea%20Infantil%20(Baby,%20Kids,%20Junior)" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp" style="width: 100%; justify-content: center;">
+              <i class="ri-whatsapp-line"></i> Pedir por WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <!-- Line 3: Línea Blanqueadora -->
+        <article class="coi-product-card" data-category="especial">
+          <div class="coi-product-card__header">
+            <span class="coi-product-card__tag">Estética Dental</span>
+            <span class="coi-product-card__num">#03</span>
+          </div>
+          <div class="coi-product-card__title-row">
+            <div class="coi-product-card__icon"><i class="ri-sparkling-fill"></i></div>
+            <h3 class="coi-product-card__title">Línea Blanqueadora</h3>
+          </div>
+          <ul class="coi-product-card__features">
+            <li><i class="ri-checkbox-circle-fill"></i> Fórmulas de baja abrasividad (RDA seguro)</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Prolonga el blanqueamiento clínico</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Protege el esmalte contra manchas diarias</li>
+          </ul>
+          <div class="coi-product-card__footer">
+            <a href="https://wa.me/51914761119?text=Hola%20COI,%20deseo%20pedir%20la%20L%C3%ADnea%20Blanqueadora" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp" style="width: 100%; justify-content: center;">
+              <i class="ri-whatsapp-line"></i> Pedir por WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <!-- Line 4: Línea Encías -->
+        <article class="coi-product-card" data-category="especial">
+          <div class="coi-product-card__header">
+            <span class="coi-product-card__tag">Cuidado Gingival</span>
+            <span class="coi-product-card__num">#04</span>
+          </div>
+          <div class="coi-product-card__title-row">
+            <div class="coi-product-card__icon"><i class="ri-heart-pulse-line"></i></div>
+            <h3 class="coi-product-card__title">Línea Encías</h3>
+          </div>
+          <ul class="coi-product-card__features">
+            <li><i class="ri-checkbox-circle-fill"></i> Previene el sangrado e inflamación</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Con provitamina B5 regeneradora</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Tonifica y refuerza el tejido gingival</li>
+          </ul>
+          <div class="coi-product-card__footer">
+            <a href="https://wa.me/51914761119?text=Hola%20COI,%20deseo%20pedir%20la%20L%C3%ADnea%20Enc%C3%ADas" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp" style="width: 100%; justify-content: center;">
+              <i class="ri-whatsapp-line"></i> Pedir por WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <!-- Line 5: Línea Sensible -->
+        <article class="coi-product-card" data-category="especial">
+          <div class="coi-product-card__header">
+            <span class="coi-product-card__tag">Desensibilizante</span>
+            <span class="coi-product-card__num">#05</span>
+          </div>
+          <div class="coi-product-card__title-row">
+            <div class="coi-product-card__icon"><i class="ri-shield-cross-line"></i></div>
+            <h3 class="coi-product-card__title">Línea Sensible</h3>
+          </div>
+          <ul class="coi-product-card__features">
+            <li><i class="ri-checkbox-circle-fill"></i> Alivio rápido frente a frío y calor</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Sella túbulos dentinarios expuestos</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Cepillos con cerdas de extrema suavidad</li>
+          </ul>
+          <div class="coi-product-card__footer">
+            <a href="https://wa.me/51914761119?text=Hola%20COI,%20deseo%20pedir%20la%20L%C3%ADnea%20Sensible" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp" style="width: 100%; justify-content: center;">
+              <i class="ri-whatsapp-line"></i> Pedir por WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <!-- Line 6: Línea Halita -->
+        <article class="coi-product-card" data-category="especial">
+          <div class="coi-product-card__header">
+            <span class="coi-product-card__tag">Mal Aliento</span>
+            <span class="coi-product-card__num">#06</span>
+          </div>
+          <div class="coi-product-card__title-row">
+            <div class="coi-product-card__icon"><i class="ri-windy-line"></i></div>
+            <h3 class="coi-product-card__title">Línea Halita</h3>
+          </div>
+          <ul class="coi-product-card__features">
+            <li><i class="ri-checkbox-circle-fill"></i> Tratamiento de mal aliento (halitosis)</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Neutraliza bacterias productoras de olor</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Colutorio, spray y limpiador lingual</li>
+          </ul>
+          <div class="coi-product-card__footer">
+            <a href="https://wa.me/51914761119?text=Hola%20COI,%20deseo%20pedir%20la%20L%C3%ADnea%20Halita%20(Tratamiento%20de%20Mal%20Aliento)" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp" style="width: 100%; justify-content: center;">
+              <i class="ri-whatsapp-line"></i> Pedir por WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <!-- Line 7: Tratamiento Periodontal -->
+        <article class="coi-product-card" data-category="especial">
+          <div class="coi-product-card__header">
+            <span class="coi-product-card__tag">Periodoncia</span>
+            <span class="coi-product-card__num">#07</span>
+          </div>
+          <div class="coi-product-card__title-row">
+            <div class="coi-product-card__icon"><i class="ri-microscope-line"></i></div>
+            <h3 class="coi-product-card__title">Tratamiento Periodontal</h3>
+          </div>
+          <ul class="coi-product-card__features">
+            <li><i class="ri-checkbox-circle-fill"></i> Coadyuvante con clorhexidina clínica</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Control intensivo de biofilm bacteriano</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Cuidado post-cirugía o raspaje radicular</li>
+          </ul>
+          <div class="coi-product-card__footer">
+            <a href="https://wa.me/51914761119?text=Hola%20COI,%20deseo%20pedir%20la%20L%C3%ADnea%20Tratamiento%20Periodontal" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp" style="width: 100%; justify-content: center;">
+              <i class="ri-whatsapp-line"></i> Pedir por WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <!-- Line 8: Interprox -->
+        <article class="coi-product-card" data-category="higiene">
+          <div class="coi-product-card__header">
+            <span class="coi-product-card__tag">Interproximal</span>
+            <span class="coi-product-card__num">#08</span>
+          </div>
+          <div class="coi-product-card__title-row">
+            <div class="coi-product-card__icon"><i class="ri-split-cells-horizontal"></i></div>
+            <h3 class="coi-product-card__title">Línea Interprox</h3>
+          </div>
+          <ul class="coi-product-card__features">
+            <li><i class="ri-checkbox-circle-fill"></i> Higiene interproximal profunda</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Variedad de calibres y formas (cónicos/cilíndricos)</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Esencial para brackets, puentes e implantes</li>
+          </ul>
+          <div class="coi-product-card__footer">
+            <a href="https://wa.me/51914761119?text=Hola%20COI,%20deseo%20pedir%20la%20L%C3%ADnea%20Interprox%20(Higiene%20Interproximal)" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp" style="width: 100%; justify-content: center;">
+              <i class="ri-whatsapp-line"></i> Pedir por WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <!-- Line 9: Hilo Dental -->
+        <article class="coi-product-card" data-category="higiene">
+          <div class="coi-product-card__header">
+            <span class="coi-product-card__tag">Seda Dental</span>
+            <span class="coi-product-card__num">#09</span>
+          </div>
+          <div class="coi-product-card__title-row">
+            <div class="coi-product-card__icon"><i class="ri-link-m"></i></div>
+            <h3 class="coi-product-card__title">Línea Hilo Dental</h3>
+          </div>
+          <ul class="coi-product-card__features">
+            <li><i class="ri-checkbox-circle-fill"></i> Sedas y cintas dentales de alta resistencia</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Con cera y flúor, no se deshilacha</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Deslizado suave protegiendo encías</li>
+          </ul>
+          <div class="coi-product-card__footer">
+            <a href="https://wa.me/51914761119?text=Hola%20COI,%20deseo%20pedir%20la%20L%C3%ADnea%20Hilo%20Dental" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp" style="width: 100%; justify-content: center;">
+              <i class="ri-whatsapp-line"></i> Pedir por WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <!-- Line 10: Cepillos -->
+        <article class="coi-product-card" data-category="higiene">
+          <div class="coi-product-card__header">
+            <span class="coi-product-card__tag">Cepillado Manual</span>
+            <span class="coi-product-card__num">#10</span>
+          </div>
+          <div class="coi-product-card__title-row">
+            <div class="coi-product-card__icon"><i class="ri-brush-line"></i></div>
+            <h3 class="coi-product-card__title">Línea Cepillos Dentales</h3>
+          </div>
+          <ul class="coi-product-card__features">
+            <li><i class="ri-checkbox-circle-fill"></i> Cerdas suaves de puntas redondeadas</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Modelos medios, suaves y quirúrgicos</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Mango ergonómico con cuello flexible</li>
+          </ul>
+          <div class="coi-product-card__footer">
+            <a href="https://wa.me/51914761119?text=Hola%20COI,%20deseo%20pedir%20la%20L%C3%ADnea%20Cepillos%20Dentales" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp" style="width: 100%; justify-content: center;">
+              <i class="ri-whatsapp-line"></i> Pedir por WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <!-- Line 11: Cepillos Eléctricos -->
+        <article class="coi-product-card" data-category="higiene">
+          <div class="coi-product-card__header">
+            <span class="coi-product-card__tag">Tecnología Sónica</span>
+            <span class="coi-product-card__num">#11</span>
+          </div>
+          <div class="coi-product-card__title-row">
+            <div class="coi-product-card__icon"><i class="ri-flashlight-line"></i></div>
+            <h3 class="coi-product-card__title">Línea Cepillos Eléctricos</h3>
+          </div>
+          <ul class="coi-product-card__features">
+            <li><i class="ri-checkbox-circle-fill"></i> Alta frecuencia oscilante y sónica</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Temporizador inteligente de 2 minutos</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Máxima remoción de placa con menor esfuerzo</li>
+          </ul>
+          <div class="coi-product-card__footer">
+            <a href="https://wa.me/51914761119?text=Hola%20COI,%20deseo%20pedir%20la%20L%C3%ADnea%20Cepillos%20El%C3%A9ctricos" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp" style="width: 100%; justify-content: center;">
+              <i class="ri-whatsapp-line"></i> Pedir por WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <!-- Line 12: Porta Cepillos -->
+        <article class="coi-product-card" data-category="higiene">
+          <div class="coi-product-card__header">
+            <span class="coi-product-card__tag">Protección & Viaje</span>
+            <span class="coi-product-card__num">#12</span>
+          </div>
+          <div class="coi-product-card__title-row">
+            <div class="coi-product-card__icon"><i class="ri-shield-check-line"></i></div>
+            <h3 class="coi-product-card__title">Porta Cepillos & Estuches</h3>
+          </div>
+          <ul class="coi-product-card__features">
+            <li><i class="ri-checkbox-circle-fill"></i> Capuchones protectores ventilados</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Estuches antibacterianos para viaje y oficina</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Mantiene tu cepillo aislado de bacterias</li>
+          </ul>
+          <div class="coi-product-card__footer">
+            <a href="https://wa.me/51914761119?text=Hola%20COI,%20deseo%20pedir%20la%20L%C3%ADnea%20Porta%20Cepillos" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp" style="width: 100%; justify-content: center;">
+              <i class="ri-whatsapp-line"></i> Pedir por WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <!-- Line 13: Implantes -->
+        <article class="coi-product-card" data-category="especial">
+          <div class="coi-product-card__header">
+            <span class="coi-product-card__tag">Implantología</span>
+            <span class="coi-product-card__num">#13</span>
+          </div>
+          <div class="coi-product-card__title-row">
+            <div class="coi-product-card__icon"><i class="ri-focus-2-line"></i></div>
+            <h3 class="coi-product-card__title">Línea Implantes</h3>
+          </div>
+          <ul class="coi-product-card__features">
+            <li><i class="ri-checkbox-circle-fill"></i> Limpieza periimplantaria especializada</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Cuellos angulados para prótesis sobre implantes</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Previene mucositis y periimplantitis</li>
+          </ul>
+          <div class="coi-product-card__footer">
+            <a href="https://wa.me/51914761119?text=Hola%20COI,%20deseo%20pedir%20la%20L%C3%ADnea%20Implantes" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp" style="width: 100%; justify-content: center;">
+              <i class="ri-whatsapp-line"></i> Pedir por WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <!-- Line 14: Packs -->
+        <article class="coi-product-card" data-category="packs">
+          <div class="coi-product-card__header">
+            <span class="coi-product-card__tag">Ahorro Integral</span>
+            <span class="coi-product-card__num">#14</span>
+          </div>
+          <div class="coi-product-card__title-row">
+            <div class="coi-product-card__icon"><i class="ri-gift-line"></i></div>
+            <h3 class="coi-product-card__title">Línea Packs Completos</h3>
+          </div>
+          <ul class="coi-product-card__features">
+            <li><i class="ri-checkbox-circle-fill"></i> Combos armados por especialistas</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Incluye cepillo + pasta + colutorio + seda</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Ahorro preferencial en kit familiar o personal</li>
+          </ul>
+          <div class="coi-product-card__footer">
+            <a href="https://wa.me/51914761119?text=Hola%20COI,%20deseo%20pedir%20los%20Packs%20de%20Cuidado%20Integral" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp" style="width: 100%; justify-content: center;">
+              <i class="ri-whatsapp-line"></i> Pedir por WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <!-- Line 15: Neceser -->
+        <article class="coi-product-card" data-category="packs">
+          <div class="coi-product-card__header">
+            <span class="coi-product-card__tag">Kits Clínicos</span>
+            <span class="coi-product-card__num">#15</span>
+          </div>
+          <div class="coi-product-card__title-row">
+            <div class="coi-product-card__icon"><i class="ri-handbag-line"></i></div>
+            <h3 class="coi-product-card__title">Neceser por Tratamientos</h3>
+          </div>
+          <ul class="coi-product-card__features">
+            <li><i class="ri-checkbox-circle-fill"></i> Kit post-cirugía, ortodoncia o blanqueamiento</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Todo lo necesario para tu recuperación en 1 estuche</li>
+            <li><i class="ri-checkbox-circle-fill"></i> Neceser organizador premium resistente</li>
+          </ul>
+          <div class="coi-product-card__footer">
+            <a href="https://wa.me/51914761119?text=Hola%20COI,%20deseo%20pedir%20el%20Neceser%20(Kit%20por%20Tratamientos)" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp" style="width: 100%; justify-content: center;">
+              <i class="ri-whatsapp-line"></i> Pedir por WhatsApp
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Pre-footer Direct CTA -->
+  <section class="section prefooter-cta">
+    <div class="container prefooter-cta__container">
+      <h2 class="prefooter-cta__title">
+        ¿Deseas Consultar o Adquirir tus Productos COI?
+      </h2>
+      <p class="prefooter-cta__desc">
+        Atención en nuestras 2 sedes en Huánuco y envíos a todo el Perú. Escríbenos por WhatsApp para coordinar tu pedido o consultar disponibilidad.
+      </p>
+      <div class="prefooter-cta__actions">
+        <a href="https://wa.me/51914761119?text=Hola%20COI,%20deseo%20consultar%20por%20sus%20productos%20odontol%C3%B3gicos" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp prefooter-cta__btn-primary">
+          <i class="ri-whatsapp-line"></i> WhatsApp COI: 914 761 119
+        </a>
+        <a href="https://wa.me/51942538705?text=Hola,%20deseo%20coordinar%20recojo%20de%20productos%20COI%20en%20Sede%20Bol%C3%ADvar" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+          <i class="ri-map-pin-line"></i> Sede Bolívar (942 538 705)
+        </a>
+        <a href="https://wa.me/51926252914?text=Hola,%20deseo%20coordinar%20recojo%20de%20productos%20COI%20en%20Sede%20Amarilis" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+          <i class="ri-map-pin-line"></i> Sede Amarilis (926 252 914)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <img src="assets/images/logo.png" alt="Xclusive Dent" class="footer__logo">
+        <p class="footer__desc">
+          Clínica Dental Especializada de vanguardia en Huánuco. Diagnóstico digital 3D y odontología de élite para toda la familia.
+        </p>
+        <div class="footer__socials">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="TikTok"><i class="ri-tiktok-line"></i></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Tratamientos</h4>
+        <ul class="footer__links">
+          <li><a href="tratamientos/ortodoncia.html">Ortodoncia y Brackets</a></li>
+          <li><a href="tratamientos/implantologia.html">Implantes Dentales</a></li>
+          <li><a href="tratamientos/estetica-dental.html">Diseño de Sonrisa</a></li>
+          <li><a href="tratamientos/endodoncia.html">Endodoncia Microscópica</a></li>
+          <li><a href="tratamientos/terceros-molares.html">Cirugía Terceros Molares</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Enlaces Rápidos</h4>
+        <ul class="footer__links">
+          <li><a href="nosotros.html">Conoce Nuestra Clínica</a></li>
+          <li><a href="especialistas.html">Nuestros Especialistas</a></li>
+          <li><a href="sedes.html">Nuestras 2 Sedes</a></li>
+          <li><a href="coi.html">Tienda Dental COI</a></li>
+          <li><a href="libro-de-reclamaciones.html">Libro de Reclamaciones</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Nuestras Sedes</h4>
+        <div class="footer__contact-item">
+          <i class="ri-map-pin-line"></i>
+          <span><strong>Sede Bolívar:</strong> Jr. Bolívar 780, Huánuco</span>
+        </div>
+        <div class="footer__contact-item">
+          <i class="ri-phone-line"></i>
+          <span>942 538 705</span>
+        </div>
+        <div class="footer__contact-item" style="margin-top: 1rem;">
+          <i class="ri-map-pin-line"></i>
+          <span><strong>Sede Amarilis:</strong> Av. Los Girasoles 207, Paucarbambilla</span>
+        </div>
+        <div class="footer__contact-item">
+          <i class="ri-phone-line"></i>
+          <span>926 252 914</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-container">
+        <p>&copy; 2026 Xclusive Dent. Todos los derechos reservados. Categorizado por SUSALUD.</p>
+        <div class="footer__legal-links">
+          <a href="privacidad.html">Políticas de Privacidad</a>
+          <a href="libro-de-reclamaciones.html">Libro de Reclamaciones</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Appointment Modal -->
+  <div class="modal" id="appointmentModal">
+    <div class="modal__overlay" onclick="closeModal('appointmentModal')"></div>
+    <div class="modal__container">
+      <button class="modal__close" onclick="closeModal('appointmentModal')" aria-label="Cerrar"><i class="ri-close-line"></i></button>
+      <div class="modal__header">
+        <span class="modal-badge"><i class="ri-calendar-check-line"></i> Cita Prioritaria</span>
+        <h3 class="modal__title">Agenda tu Consulta Especializada</h3>
+        <p class="modal__subtitle">Selecciona tu sede preferida y escríbenos directamente a WhatsApp para reservar tu cita inmediata.</p>
+      </div>
+      <div class="modal__actions">
+        <a href="https://wa.me/51942538705?text=Hola%20Xclusive%20Dent,%20deseo%20agendar%20una%20cita%20en%20Sede%20Bol%C3%ADvar" target="_blank" rel="noopener noreferrer" class="btn btn--primary modal__btn">
+          <i class="ri-map-pin-line"></i> Agendar en Sede Bolívar (942 538 705)
+        </a>
+        <a href="https://wa.me/51926252914?text=Hola%20Xclusive%20Dent,%20deseo%20agendar%20una%20cita%20en%20Sede%20Amarilis" target="_blank" rel="noopener noreferrer" class="btn btn--outline modal__btn">
+          <i class="ri-map-pin-line"></i> Agendar en Sede Amarilis (926 252 914)
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WhatsApp Floating Button (COI Direct) -->
+  <a href="https://wa.me/51914761119?text=Hola%20COI,%20deseo%20consultar%20por%20sus%20productos%20odontol%C3%B3gicos" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat directo por WhatsApp">
+    <i class="ri-whatsapp-line"></i>
+  </a>
+
+  <!-- JavaScript for Interactive Category Filtering & Nav -->
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const productCards = document.querySelectorAll('.coi-product-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+
+          const filter = this.getAttribute('data-filter');
+
+          productCards.forEach(card => {
+            const cardCat = card.getAttribute('data-category');
+            if (filter === 'all' || cardCat === filter) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

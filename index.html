@@ -29,7 +29,7 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=1.9">
 
   <!-- Structured Data / SEO Schema (Dentist / MedicalBusiness) -->
   <script type="application/ld+json">
@@ -90,9 +90,6 @@
         <span class="topbar__badge">
           <span class="pulse-dot"></span> Sedes Huánuco & Amarilis
         </span>
-        <span class="topbar__item">
-          <i class="ri-medal-line"></i> Clínica Categorizada por <strong>SUSALUD</strong>
-        </span>
       </div>
       <div class="topbar__right">
         <a href="tel:+51942538705" class="topbar__item topbar__link">
@@ -122,6 +119,7 @@
           <li><a href="especialistas.html" class="nav__link">Especialistas</a></li>
           <li><a href="sedes.html" class="nav__link">Sedes</a></li>
           <li><a href="testimonios.html" class="nav__link">Testimonios</a></li>
+          <li><a href="coi.html" class="nav__link">Tienda COI</a></li>
         </ul>
       </nav>
 
@@ -150,6 +148,19 @@
     <div class="container hero__grid">
       <!-- Left Column: Magnetic Value Proposition -->
       <div class="hero__content">
+        <!-- SUSALUD Featured Accreditation Highlight -->
+        <div class="hero-susalud-highlight" style="display: inline-flex; align-items: center; gap: 0.85rem; margin-bottom: 1.75rem; background: rgba(13, 34, 56, 0.85); border: 1px solid rgba(0, 212, 250, 0.4); padding: 0.45rem 0.95rem 0.45rem 0.5rem; border-radius: 14px; box-shadow: 0 4px 20px rgba(0, 212, 250, 0.15);">
+          <div class="hero-susalud-highlight__logo-box" style="background: #ffffff; padding: 0.25rem 0.55rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <img src="assets/images/susalud_categorizado.jpeg" alt="SUSALUD - Establecimiento de Salud Categorizado" class="hero-susalud-highlight__logo" width="110" height="34" style="height: 32px; width: auto; max-width: 110px; display: block; object-fit: contain;">
+          </div>
+          <div class="hero-susalud-highlight__content" style="display: flex; align-items: center;">
+            <div class="hero-susalud-highlight__headline" style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem; color: #ffffff; line-height: 1.25; margin: 0;">
+              <span class="hero-susalud-highlight__dot" style="width: 8px; height: 8px; border-radius: 50%; background: #10b981; box-shadow: 0 0 10px #10b981; flex-shrink: 0;"></span>
+              <span class="hero-susalud-highlight__text">Clínica Categorizada por <strong style="color: #00d4fa; font-weight: 700;">SUSALUD</strong></span>
+            </div>
+          </div>
+        </div>
+
         <div class="hero__badge-group">
           <span class="hero__badge">
             <i class="ri-shield-star-line"></i> Especialistas Certificados RNE
@@ -188,7 +199,7 @@
             <div class="hero__stat-label">Años de Trayectoria</div>
           </div>
           <div class="hero__stat-item">
-            <div class="hero__stat-num counter-val" data-target="5" data-suffix="">5</div>
+            <div class="hero__stat-num counter-val" data-target="6" data-suffix="">6</div>
             <div class="hero__stat-label">Especialistas Colegiados</div>
           </div>
         </div>
@@ -609,13 +620,6 @@
             <span class="brand-item__label">Resinas de Alta Gama (EE.UU.)</span>
           </div>
 
-          <div class="brand-item">
-            <div class="brand-item__logo-wrap">
-              <img src="assets/images/brands/brand_coi.svg" alt="COI Centro Odontológico" class="brand-item__logo" loading="lazy">
-            </div>
-            <span class="brand-item__label">Implantología y Formación</span>
-          </div>
-
           <!-- Set 2 (Duplicate for continuous seamless infinite loop) -->
           <div class="brand-item" aria-hidden="true">
             <div class="brand-item__logo-wrap">
@@ -651,12 +655,46 @@
             </div>
             <span class="brand-item__label">Resinas de Alta Gama (EE.UU.)</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <div class="brand-item" aria-hidden="true">
-            <div class="brand-item__logo-wrap">
-              <img src="assets/images/brands/brand_coi.svg" alt="COI Centro Odontológico" class="brand-item__logo" loading="lazy">
-            </div>
-            <span class="brand-item__label">Implantología y Formación</span>
+  <!-- ==========================================================================
+       ALIADO ESTRATÉGICO: COI (CUIDADO ODONTOLÓGICO INTEGRAL - TIENDA DENTAL)
+       ========================================================================== -->
+  <section class="section" id="aliado-coi">
+    <div class="container">
+      <div class="story-grid" style="align-items: center;">
+        <div>
+          <h2 class="section-title">COI — Cuidado Odontológico Integral</h2>
+          <p class="section-desc" style="margin-bottom: 1.25rem;">
+            En alianza con <strong>COI</strong>, ponemos a tu alcance una tienda especializada en salud bucal. Más que comercializar productos certificados para prevención y tratamiento, <strong>te enseñamos el uso correcto de cada uno</strong> para asegurar resultados clínicos óptimos.
+          </p>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.75rem;">
+            <span class="hero__flag-tag"><i class="ri-check-line" style="color: var(--accent-cyan);"></i> 15 Líneas Especializadas</span>
+            <span class="hero__flag-tag"><i class="ri-check-line" style="color: var(--accent-cyan);"></i> Ortodoncia, Niños & Periodoncia</span>
+            <span class="hero__flag-tag"><i class="ri-check-line" style="color: var(--accent-cyan);"></i> Asesoría en Técnica de Uso</span>
+            <span class="hero__flag-tag"><i class="ri-check-line" style="color: var(--accent-cyan);"></i> Sedes Bolívar y Amarilis</span>
+            <span class="hero__flag-tag"><i class="ri-truck-line" style="color: var(--accent-cyan);"></i> Envíos a Todo el Perú</span>
+          </div>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 0.85rem;">
+            <a href="coi.html" class="btn btn--primary">
+              <i class="ri-store-2-line"></i> Conocer Tienda COI y Catálogo <i class="ri-arrow-right-line"></i>
+            </a>
+            <a href="https://wa.me/51914761119?text=Hola%20COI,%20deseo%20consultar%20por%20los%20productos%20odontol%C3%B3gicos" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp">
+              <i class="ri-whatsapp-line"></i> WhatsApp COI: 914 761 119
+            </a>
+          </div>
+        </div>
+
+        <div class="story-image-wrap" style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 3rem 2rem; box-shadow: var(--shadow-md); text-align: center;">
+          <img src="assets/images/logo_coi.png" alt="COI - Cuidado Odontológico Integral" style="max-height: 135px; width: auto; object-fit: contain; margin-bottom: 1.25rem;">
+          <div style="display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.85rem; font-weight: 600; color: var(--text-muted);">
+            <i class="ri-shield-check-line" style="color: var(--accent-cyan); font-size: 1.05rem;"></i>
+            <span>Tienda Oficial & Asesoría Clínica Personalizada</span>
           </div>
         </div>
       </div>
@@ -815,7 +853,22 @@
           </div>
         </article>
 
-        <!-- Doctor 3: Dra. Ilusión Ortiz -->
+        <!-- Doctor 3: Dr. Gustavo Yamil Manzanedo Carbajal -->
+        <article class="doctor-card">
+          <div class="doctor-card__photo-wrap">
+            <img src="assets/images/doctors/doctor_gustavo_manzanedo.jpg" alt="Dr. Gustavo Yamil Manzanedo Carbajal" class="doctor-card__photo">
+          </div>
+          <div class="doctor-card__body">
+            <h3 class="doctor-card__name">Dr. Gustavo Yamil Manzanedo Carbajal</h3>
+            <div class="doctor-card__spec">
+              Especialista en Cirugía Bucal y Maxilofacial (RNE 5628)
+            </div>
+            <span class="doctor-card__cop">C.O.P. 46582</span>
+          </div>
+        </article>
+
+
+        <!-- Doctor 4: Dra. Ilusión Ortiz -->
         <article class="doctor-card">
           <div class="doctor-card__photo-wrap">
             <img src="assets/images/doctors/doctora_ilusion_ortiz.jpg" alt="Dra. Ilusión Ortiz" class="doctor-card__photo">
@@ -829,7 +882,7 @@
           </div>
         </article>
 
-        <!-- Doctor 4: Dra. Rocío Álvarez -->
+        <!-- Doctor 5: Dra. Rocío Álvarez -->
         <article class="doctor-card">
           <div class="doctor-card__photo-wrap">
             <img src="assets/images/doctors/doctora_rocio_alvarez.jpg" alt="Dra. Rocío Álvarez" class="doctor-card__photo">
@@ -843,7 +896,7 @@
           </div>
         </article>
 
-        <!-- Doctor 5: Dra. Rosemaria Mallqui -->
+        <!-- Doctor 6: Dra. Rosemaria Mallqui -->
         <article class="doctor-card">
           <div class="doctor-card__photo-wrap">
             <img src="assets/images/doctors/doctora_rosemaria_mallqui.jpg" alt="Dra. Rosemaria Mallqui" class="doctor-card__photo">
@@ -1071,6 +1124,7 @@
           <li><a href="especialistas.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Especialistas</a></li>
           <li><a href="sedes.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Sedes</a></li>
           <li><a href="testimonios.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Testimonios</a></li>
+          <li><a href="coi.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Tienda Dental COI</a></li>
         </ul>
       </div>
 

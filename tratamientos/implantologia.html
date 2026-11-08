@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/styles.css?v=1.9">
 </head>
 <body>
 
@@ -24,9 +24,6 @@
       <div class="topbar__left">
         <span class="topbar__badge">
           <span class="pulse-dot"></span> Sedes Huánuco & Amarilis
-        </span>
-        <span class="topbar__item">
-          <i class="ri-medal-line"></i> Clínica Categorizada por <strong>SUSALUD</strong>
         </span>
       </div>
       <div class="topbar__right">
@@ -54,6 +51,7 @@
           <li><a href="../especialistas.html" class="nav__link">Especialistas</a></li>
           <li><a href="../sedes.html" class="nav__link">Sedes</a></li>
           <li><a href="../testimonios.html" class="nav__link">Testimonios</a></li>
+          <li><a href="../coi.html" class="nav__link">Tienda COI</a></li>
         </ul>
       </nav>
       <div class="nav__actions">
@@ -249,7 +247,12 @@
               </div>
             </div>
 
-            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <!-- Certificado Oficial Dr. Ronald Álvarez -->
+            <div class="sidebar-doctor-certificate" onclick="openModal('certificateModal')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('certificateModal');}" title="Clic para ampliar certificado" aria-label="Ampliar certificado del Dr. Ronald Álvarez" style="margin-bottom: 1.5rem;">
+              <img src="../assets/images/doctors/certificado_dr_ronald_alvarez.jpg" alt="Certificado del Dr. Ronald Álvarez Albornoz" class="sidebar-doctor-certificate__img" loading="lazy">
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem;">
               <a href="https://wa.me/51942538705?text=Hola%20Dr.%20Ronald,%20deseo%20evaluación%20para%20Implantes%20Dentales%20en%20Sede%20Bolívar" target="_blank" class="btn btn--whatsapp btn--lg" style="width: 100%; justify-content: center;">
                 <i class="ri-whatsapp-line"></i> Consultar Sede Bolívar
               </a>
@@ -320,6 +323,7 @@
           <li><a href="../especialistas.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Especialistas</a></li>
           <li><a href="../sedes.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Sedes</a></li>
           <li><a href="../testimonios.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Testimonios</a></li>
+          <li><a href="../coi.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Tienda Dental COI</a></li>
         </ul>
       </div>
 
@@ -467,6 +471,34 @@
           <span class="modal-trust-note"><i class="ri-shield-check-line"></i> Respuesta inmediata en horario de atención</span>
         </div>
       </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL: CERTIFICADO OFICIAL DR. RONALD ÁLVAREZ
+       ========================================================================== -->
+  <div class="modal" id="certificateModal" role="dialog" aria-modal="true" aria-labelledby="certModalTitle">
+    <div class="modal__content modal__content--cert">
+      <button class="modal__close" onclick="closeModal()" aria-label="Cerrar ventana">
+        <i class="ri-close-line"></i>
+      </button>
+
+      <div class="modal-header-compact" style="margin-bottom: 0.85rem;">
+        <span class="modal-badge"><i class="ri-shield-check-fill"></i> Credencial Oficial</span>
+        <h3 id="certModalTitle" class="modal-title" style="font-size: 1.15rem; margin-top: 0.35rem;">Certificado de Especialista</h3>
+        <p class="modal-subtitle" style="font-size: 0.85rem; margin-bottom: 0;">Colegio Odontológico del Perú • Consejo Nacional</p>
+      </div>
+
+      <div class="modal-cert-viewer">
+        <img src="../assets/images/doctors/certificado_dr_ronald_alvarez.jpg" alt="Certificado RNE Colegio Odontológico del Perú - Dr. Ronald Álvarez Albornoz" class="modal-cert-img" loading="lazy">
+      </div>
+
+      <div class="modal-cert-footer">
+        <span><i class="ri-checkbox-circle-fill" style="color: #0284c7;"></i> C.O.P. <strong>33104</strong> | Director Clínico</span>
+        <a href="../assets/images/doctors/certificado_dr_ronald_alvarez.jpg" target="_blank" class="btn btn--outline" style="padding: 0.35rem 0.85rem; font-size: 0.78rem;">
+          <i class="ri-external-link-line"></i> Ver Imagen Completa
+        </a>
+      </div>
     </div>
   </div>
 
